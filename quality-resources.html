@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quality &amp; Resources — CELVION | Inspired by Nature. Defined by Innovation.</title>
+  <meta name="description"
+    content="Explore CELVION quality standards, international certifications, downloadable Technical Data Sheets (TDS), whitepapers, and corporate resources.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --teal: #005A46;
+      --teal-deep: #00402F;
+      --teal-tint: #E4EEEC;
+      --gold: #B37A42;
+      --gold-deep: #8C5F30;
+      --gold-tint: #F3E6D8;
+      --ink: #2F3437;
+      --cream: #F8F8F5;
+      --sand: #ECE7DF;
+      --charcoal: #2F3437;
+      --graphite: #5C6469;
+      --line: rgba(47, 52, 55, 0.14);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--charcoal);
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    ::selection {
+      background: var(--teal);
+      color: var(--cream);
+    }
+
+    .wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 56px;
+    }
+
+    section {
+      position: relative;
+    }
+
+    .section-pad {
+      padding: 100px 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--charcoal);
+    }
+
+    em {
+      font-style: normal;
+      font-weight: 700;
+      color: var(--teal-deep);
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--teal-deep);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .eyebrow::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    .section-head {
+      max-width: 64ch;
+      margin-bottom: 56px;
+    }
+
+    .section-title,
+    .section-title em {
+      font-size: clamp(30px, 3.4vw, 46px);
+      line-height: 1.12;
+      color: #2F3437 !important;
+    }
+
+    .section-desc {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--graphite);
+      margin-top: 16px;
+      max-width: 62ch;
+    }
+
+    .bg-tint {
+      background: var(--teal-tint);
+    }
+
+    .bg-sand {
+      background: var(--sand);
+    }
+
+    .bg-dark {
+      background: var(--teal-deep);
+      color: #fff;
+    }
+
+    .bg-dark h1,
+    .bg-dark h2,
+    .bg-dark h3,
+    .bg-dark h4 {
+      color: #fff;
+    }
+
+    .bg-dark .eyebrow {
+      color: var(--gold);
+    }
+
+    .bg-dark .eyebrow::before {
+      background: #fff;
+    }
+
+    .bg-dark p {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 15px 30px;
+      border-radius: 40px;
+      transition: transform .25s ease, background .3s ease, color .3s ease, box-shadow .3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-solid {
+      background: var(--teal);
+      color: #fff;
+      box-shadow: 0 10px 24px -10px rgba(0, 90, 70, 0.55);
+    }
+
+    .btn-solid:hover {
+      background: var(--teal-deep);
+      transform: translateY(-2px);
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #fff;
+      box-shadow: 0 10px 24px -10px rgba(179, 122, 66, 0.55);
+    }
+
+    .btn-gold:hover {
+      background: var(--gold-deep);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--charcoal);
+      border: 1.5px solid var(--charcoal);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--teal);
+      color: var(--teal-deep);
+      transform: translateY(-2px);
+    }
+
+    /* reveal-on-scroll */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .8s cubic-bezier(.22, .61, .36, 1), transform .8s cubic-bezier(.22, .61, .36, 1);
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .stagger .reveal:nth-child(1) {
+      transition-delay: .02s;
+    }
+
+    .stagger .reveal:nth-child(2) {
+      transition-delay: .07s;
+    }
+
+    .stagger .reveal:nth-child(3) {
+      transition-delay: .12s;
+    }
+
+    .stagger .reveal:nth-child(4) {
+      transition-delay: .17s;
+    }
+
+    .stagger .reveal:nth-child(5) {
+      transition-delay: .22s;
+    }
+
+    .stagger .reveal:nth-child(6) {
+      transition-delay: .27s;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
+
+    /* SITE NAV */
+    .site-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 56px;
+      background: rgba(248, 248, 245, 0.92);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 1px 0 var(--line);
+      transition: padding .4s ease, background .4s ease, box-shadow .4s ease;
+    }
+
+    .site-nav.is-scrolled {
+      padding: 16px 56px;
+    }
+
+    .nav-logo {
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      color: var(--teal);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--charcoal);
+      text-decoration: none;
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      transition: width .3s ease;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .nav-links a.active {
+      color: #2F3437 !important;
+      font-weight: 700;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .nav-cta {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--teal);
+      text-decoration: none;
+      padding: 11px 22px;
+      border-radius: 30px;
+      transition: background .3s ease, transform .2s ease;
+      white-space: nowrap;
+    }
+
+    .nav-cta:hover {
+      background: var(--teal-deep);
+      transform: translateY(-1px);
+    }
+
+    @media (max-width:1100px) {
+      .nav-links {
+        display: none;
+      }
+
+      .site-nav {
+        padding: 20px 24px;
+      }
+
+      .site-nav.is-scrolled {
+        padding: 14px 24px;
+      }
+    }
+
+    /* PAGE HEADER */
+    .page-header {
+      padding: 170px 56px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(600px 300px at 15% 0%, rgba(0, 90, 70, 0.08), transparent 70%),
+        radial-gradient(600px 300px at 85% 10%, rgba(179, 122, 66, 0.08), transparent 70%);
+      pointer-events: none;
+    }
+
+    .page-header .eyebrow {
+      justify-content: center;
+    }
+
+    .page-header h1,
+    .page-header h1 em {
+      font-size: clamp(36px, 4.8vw, 60px);
+      line-height: 1.1;
+      max-width: 22ch;
+      margin: 0 auto;
+      color: #2F3437 !important;
+    }
+
+    .page-header p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--graphite);
+      max-width: 62ch;
+      margin: 22px auto 0;
+    }
+
+    .header-marks {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 34px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header-marks span {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--teal-deep);
+      background: #fff;
+      border: 1px solid var(--line);
+      padding: 8px 18px;
+      border-radius: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+
+    @media (max-width:980px) {
+      .page-header {
+        padding: 140px 24px 60px;
+      }
+    }
+
+    /* GRIDS */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 36px;
+    }
+
+    @media (max-width:980px) {
+      .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width:640px) {
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 36px;
+      border: 1px solid var(--line);
+      transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 36px -12px rgba(47, 52, 55, 0.09);
+      border-color: var(--teal);
+    }
+
+    .card-num {
+      font-family: 'Manrope', sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      font-size: 22px;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--graphite);
+    }
+
+    /* RESOURCE CARD DOWNLOAD */
+    .resource-card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 30px;
+      border: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+      transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+    }
+
+    .resource-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--teal);
+      box-shadow: 0 14px 32px -10px rgba(0, 90, 70, 0.12);
+    }
+
+    .resource-type {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--teal-deep);
+      background: var(--teal-tint);
+      padding: 4px 12px;
+      border-radius: 12px;
+      display: inline-block;
+    }
+
+    .resource-meta {
+      font-size: 13px;
+      color: var(--graphite);
+      margin-top: 8px;
+      display: flex;
+      gap: 12px;
+    }
+
+    /* CERTIFICATION BADGES */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 36px;
+    }
+
+    .cert-box {
+      background: var(--cream);
+      border-radius: 16px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .cert-code {
+      font-family: 'Manrope', sans-serif;
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--teal);
+      margin-bottom: 6px;
+    }
+
+    .cert-label {
+      font-size: 14px;
+      color: var(--graphite);
+      font-weight: 500;
+    }
+
+    @media (max-width:800px) {
+      .cert-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background: var(--charcoal);
+      color: #fff;
+      padding: 50px 0 24px;
+      font-size: 14px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 48px;
+      margin-bottom: 36px;
+    }
+
+    .footer-brand p {
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 16px;
+      line-height: 1.7;
+      max-width: 34ch;
+    }
+
+    .footer-col h4 {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-col a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: color .2s ease;
+    }
+
+    .footer-col a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 13px;
+    }
+
+    .footer-marks {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-marks span {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.7);
+      background: rgba(255, 255, 255, 0.06);
+      padding: 4px 12px;
+      border-radius: 12px;
+    }
+
+    @media (max-width:980px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width:560px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 90;
+      background: #25D366;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 10px 24px rgba(37, 211, 102, 0.4);
+      transition: transform .25s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.05);
+    }
+
+    .whatsapp-float svg {
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SITE NAV -->
+  <nav class="site-nav" id="siteNav">
+    <a href="index.html" class="nav-logo">CELVION</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="manufacturing.html">Manufacturing</a></li>
+      <li><a href="industries-careers.html">Industries &amp; Careers</a></li>
+      <li><a href="quality-resources.html" class="active">Quality &amp; Resources</a></li>
+      <li><a href="innovation-sustainability.html">Innovation &amp; Sustainability</a></li>
+      <li><a href="export.html">Export</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="contact.html" class="nav-cta">Get a Quote</a>
+      <a href="export.html" class="nav-cta" style="background:var(--charcoal);">Login</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="wrap" style="padding:0;">
+      <h1>Quality Architecture <em>&amp; Resources</em></h1>
+      <p>“Quality is engineered from the beginning, not inspected in at the end.” Download Technical Data Sheets (TDS),
+        regulatory certificates, and corporate whitepapers.</p>
+      <div class="header-marks">
+        <span>FDA 21 CFR Food-Grade</span><span>BPI Compostable Certified</span><span>ISO
+          9001:2015</span><span>Downloadable TDS Library</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- QUALITY ARCHITECTURE SECTION -->
+  <section class="section-pad">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="section-title">Precision testing &amp; <em>uncompromising standards</em></h2>
+        <p class="section-desc">Every product carrying the CELVION mark represents our global reputation. Our quality
+          management system combines continuous optical inspection, calibrated density analysis, and strict
+          international compliance.</p>
+      </div>
+
+      <div class="grid-3 stagger">
+        <div class="card reveal">
+          <div>
+            <div class="card-num">Pillar 01</div>
+            <h3>Engineering Excellence</h3>
+            <p>Every plate, bowl, and tray is engineered with precise wall thickness and reinforced rim geometry for
+              high structural integrity under heavy thermal loads.</p>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div>
+            <div class="card-num">Pillar 02</div>
+            <h3>Toxin-Free &amp; Pure Fibre</h3>
+            <p>Formulated with 100% renewable sugarcane and bamboo fibres with zero PFAS, heavy metals, or plastic
+              coatings, fulfilling global food safety directives.</p>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div>
+            <div class="card-num">Pillar 03</div>
+            <h3>Automated Inline Inspection</h3>
+            <p>Real-time optical vision scanners check 100% of manufactured units for surface uniformity, edge trim
+              accuracy, and dimensional tolerances.</p>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div>
+            <div class="card-num">Pillar 04</div>
+            <h3>Thermal &amp; Liquid Resistance</h3>
+            <p>Batch-tested for hot oil (120°C) and boiling water (100°C) retention up to 4 hours without leakage,
+              softening, or structural deformation.</p>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div>
+            <div class="card-num">Pillar 05</div>
+            <h3>Traceable Batch Coding</h3>
+            <p>Every export shipping carton features unique QR codes linking directly to raw material origin,
+              manufacturing date, and lab quality test reports.</p>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div>
+            <div class="card-num">Pillar 06</div>
+            <h3>Export-Grade Protection</h3>
+            <p>Heavy-duty double-wall master cartons and moisture-barrier shrink wraps designed to withstand sea freight
+              vibration and humidity extremes.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERNATIONAL CERTIFICATION MATRIX -->
+      <div style="margin-top:72px;" class="reveal">
+        <h3 style="font-size:26px; margin-bottom:10px;">International Compliance &amp; Certifications</h3>
+        <p style="color:var(--graphite); font-size:15px;">CELVION materials comply with international environmental and
+          food safety standards across key global regions.</p>
+
+        <div class="cert-grid">
+          <div class="cert-box">
+            <div class="cert-code">FDA</div>
+            <div class="cert-label">US FDA 21 CFR 176.170 Direct Food Contact Compliant</div>
+          </div>
+          <div class="cert-box">
+            <div class="cert-code">BPI</div>
+            <div class="cert-label">ASTM D6400 Commercial Compostability Certified</div>
+          </div>
+          <div class="cert-box">
+            <div class="cert-code">EN 13432</div>
+            <div class="cert-label">European Industrial Compostability Standard</div>
+          </div>
+          <div class="cert-box">
+            <div class="cert-code">ISO 9001</div>
+            <div class="cert-label">Certified Quality Management System</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESOURCE HUB & TDS DOWNLOADS -->
+  <section class="section-pad bg-sand" id="resources">
+    <div class="wrap">
+      <div class="section-head reveal" style="max-width:900px;">
+        <h2 class="section-title">Download product specifications &amp;<br><em>brand documentation</em></h2>
+        <p class="section-desc">Access official Technical Data Sheets (TDS), material science whitepapers, and corporate
+          profiles for your procurement and engineering team.</p>
+      </div>
+
+      <div class="grid-3 stagger">
+        <div class="resource-card reveal">
+          <div>
+            <span class="resource-type">Technical Data Sheet</span>
+            <h3 style="margin-top:12px; font-size:20px;">CELVION Serve™ Series</h3>
+            <p style="font-size:14px; color:var(--graphite); margin-top:8px;">Full technical specifications for round,
+              oval, and compartment tableware plates including load limits and thermal bounds.</p>
+            <div class="resource-meta">
+              <span>Format: PDF</span> &middot; <span>Size: 1.4 MB</span>
+            </div>
+          </div>
+          <button onclick="downloadDoc('CELVION_Serve_TDS.pdf')" class="btn btn-solid"
+            style="padding:12px 20px; font-size:12px; justify-content:center;">Download TDS PDF</button>
+        </div>
+
+        <div class="resource-card reveal">
+          <div>
+            <span class="resource-type">Technical Data Sheet</span>
+            <h3 style="margin-top:12px; font-size:20px;">CELVION Fresh™ Meal Boxes</h3>
+            <p style="font-size:14px; color:var(--graphite); margin-top:8px;">Dimensions, stacking strength,
+              leak-resistance benchmarks, and lid sealing options for multi-compartment clamshells.</p>
+            <div class="resource-meta">
+              <span>Format: PDF</span> &middot; <span>Size: 1.8 MB</span>
+            </div>
+          </div>
+          <button onclick="downloadDoc('CELVION_Fresh_TDS.pdf')" class="btn btn-solid"
+            style="padding:12px 20px; font-size:12px; justify-content:center;">Download TDS PDF</button>
+        </div>
+
+        <div class="resource-card reveal">
+          <div>
+            <span class="resource-type">Technical Data Sheet</span>
+            <h3 style="margin-top:12px; font-size:20px;">CELVION Bio™ Bowls &amp; Soups</h3>
+            <p style="font-size:14px; color:var(--graphite); margin-top:8px;">Capacity ratings, fluid retention data,
+              lid compatibility, and microwave heating performance guidelines.</p>
+            <div class="resource-meta">
+              <span>Format: PDF</span> &middot; <span>Size: 1.2 MB</span>
+            </div>
+          </div>
+          <button onclick="downloadDoc('CELVION_Bio_TDS.pdf')" class="btn btn-solid"
+            style="padding:12px 20px; font-size:12px; justify-content:center;">Download TDS PDF</button>
+        </div>
+
+        <div class="resource-card reveal">
+          <div>
+            <span class="resource-type">Technical Data Sheet</span>
+            <h3 style="margin-top:12px; font-size:20px;">CELVION Pack™ Industrial Trays</h3>
+            <p style="font-size:14px; color:var(--graphite); margin-top:8px;">Custom mould tolerances, shock absorption
+              metrics, and pallet packing layouts for industrial electronics &amp; automotive parts.</p>
+            <div class="resource-meta">
+              <span>Format: PDF</span> &middot; <span>Size: 2.1 MB</span>
+            </div>
+          </div>
+          <button onclick="downloadDoc('CELVION_Pack_TDS.pdf')" class="btn btn-solid"
+            style="padding:12px 20px; font-size:12px; justify-content:center;">Download TDS PDF</button>
+        </div>
+
+        <div class="resource-card reveal">
+          <div>
+            <span class="resource-type">Corporate Profile</span>
+            <h3 style="margin-top:12px; font-size:20px;">CELVION Brand Blueprint</h3>
+            <p style="font-size:14px; color:var(--graphite); margin-top:8px;">Official brand identity, mission
+              statement, manufacturing footprint, and strategic growth roadmap 2026–2030.</p>
+            <div class="resource-meta">
+              <span>Format: PDF</span> &middot; <span>Size: 3.5 MB</span>
+            </div>
+          </div>
+          <button onclick="downloadDoc('CELVION_Brand_Blueprint.pdf')" class="btn btn-gold"
+            style="padding:12px 20px; font-size:12px; justify-content:center;">Download Profile PDF</button>
+        </div>
+
+        <div class="resource-card reveal">
+          <div>
+            <span class="resource-type">Whitepaper</span>
+            <h3 style="margin-top:12px; font-size:20px;">Fibre vs. Single-Use Plastics</h3>
+            <p style="font-size:14px; color:var(--graphite); margin-top:8px;">A comprehensive LCA (Life Cycle
+              Assessment) comparing carbon footprint, water usage, and end-of-life compostability.</p>
+            <div class="resource-meta">
+              <span>Format: PDF</span> &middot; <span>Size: 2.8 MB</span>
+            </div>
+          </div>
+          <button onclick="downloadDoc('CELVION_LCA_Whitepaper.pdf')" class="btn btn-gold"
+            style="padding:12px 20px; font-size:12px; justify-content:center;">Download Whitepaper</button>
+        </div>
+      </div>
+
+      <!-- DOCUMENTATION REQUEST NOTICE -->
+      <div
+        style="margin-top:60px; background:#fff; border-radius:20px; padding:36px; border:1px solid var(--line); display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;"
+        class="reveal">
+        <div>
+          <h3 style="font-size:22px;">Require Custom Compliance Documentation or Lab Reports?</h3>
+          <p style="font-size:15px; color:var(--graphite); margin-top:6px;">Our quality assurance team can provide
+            batch-specific Certificate of Analysis (CoA) and regional food safety lab test results on request.</p>
+        </div>
+        <a href="contact.html" class="btn btn-solid">Request Lab Certificates</a>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="footer-logo"
+            style="text-decoration:none; display:inline-block; font-family:'Manrope',sans-serif; font-size:22px; font-weight:800; color:#fff;">CELVION</a>
+          <p class="footer-tagline"
+            style="color:rgba(255,255,255,0.7); margin-top:16px; line-height:1.7; max-width:34ch;">Inspired by Nature.
+            Defined by Innovation. A premium global sustainable materials
+            company engineering renewable alternatives to conventional packaging.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="manufacturing.html">Manufacturing</a></li>
+            <li><a href="industries-careers.html">Industries &amp; Careers</a></li>
+            <li><a href="quality-resources.html">Quality &amp; Resources</a></li>
+            <li><a href="innovation-sustainability.html">Innovation &amp; Sustainability</a></li>
+            <li><a href="export.html">Export</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="products.html#serve">CELVION Serve&trade;</a></li>
+            <li><a href="products.html#fresh">CELVION Fresh&trade;</a></li>
+            <li><a href="products.html#bio">CELVION Bio&trade;</a></li>
+            <li><a href="products.html#pack">CELVION Pack&trade;</a></li>
+            <li><a href="products.html#carry">CELVION Carry&trade;</a></li>
+            <li><a href="products.html#fibre">CELVION Fibre&trade;</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Corporate Office</h4>
+          <address style="font-style:normal; color:rgba(255,255,255,0.7); line-height:1.6;">
+            1313–1314, 13th Floor, Fortune Business Hub,<br>
+            Nr. Shell Petrol Pump, Science City Road,<br>
+            Sola, Ahmedabad – 380060, Gujarat, India
+          </address>
+          <ul style="margin-top:16px;">
+            <li><a href="tel:+917990441625">+91 7990441625</a></li>
+            <li><a href="mailto:sales@sngecoindia.com">sales@sngecoindia.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 SNG Eco India Pvt Ltd. All rights reserved.</span>
+        <div class="footer-marks">
+          <span>Engineering Excellence</span><span>Global Quality Standards</span><span>Renewable
+            Materials</span><span>Export Ready</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/917990441625?text=Hi%2C%20I%27m%20interested%20in%20CELVION%20quality%20documents%20and%20TDS"
+    class="whatsapp-float" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24">
+      <path
+        d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.764.459 3.487 1.333 5.006l-1.417 5.176 5.297-1.389c1.472.802 3.136 1.224 4.773 1.225h.004c5.505 0 9.988-4.478 9.989-9.985 0-2.668-1.039-5.176-2.927-7.062s-4.4-2.939-7.062-2.939zm5.95 14.156c-.25.707-1.464 1.348-2.023 1.428-.521.074-1.2.109-1.936-.127-.446-.143-1.018-.328-1.766-.653-3.14-1.365-5.184-4.551-5.342-4.761-.157-.21-1.282-1.706-1.282-3.254 0-1.547.812-2.308 1.101-2.617.289-.309.631-.387.842-.387.21 0 .421.002.605.011.196.009.46-.074.721.552.263.626.894 2.181.972 2.339.079.158.131.342.026.552-.105.21-.157.342-.315.526-.158.184-.332.411-.473.552-.158.158-.323.328-.139.643.184.315.818 1.35 1.758 2.186 1.208 1.076 2.226 1.41 2.541 1.567.315.158.5.131.684-.079.184-.21.788-.919.998-1.234.21-.315.42-.263.709-.158.289.105 1.838.867 2.153 1.024.315.158.526.236.605.368.079.131.079.761-.171 1.468z" />
+    </svg>
+    <span>Chat with us</span>
+  </a>
+
+  <script>
+    // Nav shrink on scroll
+    const nav = document.getElementById('siteNav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) nav.classList.add('is-scrolled');
+      else nav.classList.remove('is-scrolled');
+    }, { passive: true });
+
+    // Reveal-on-scroll
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach((el) => io.observe(el));
+
+    function downloadDoc(fileName) {
+      alert('Initiating download for ' + fileName + '. (PDF document generated according to CELVION Brand Blueprint standards).');
+    }
+  </script>
+
+</body>
+
+</html>

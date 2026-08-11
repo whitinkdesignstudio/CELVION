@@ -1,0 +1,2686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — CELVION | Inspired by Nature. Defined by Innovation.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --teal: #005A46;
+      --teal-deep: #00402F;
+      --teal-tint: #E4EEEC;
+      --gold: #B37A42;
+      --gold-deep: #8C5F30;
+      --gold-tint: #F3E6D8;
+      --ink: #2F3437;
+      --cream: #F8F8F5;
+      --sand: #ECE7DF;
+      --charcoal: #2F3437;
+      --graphite: #5C6469;
+      --line: rgba(47, 52, 55, 0.14);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--charcoal);
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    ::selection {
+      background: var(--teal);
+      color: var(--cream);
+    }
+
+    .wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 56px;
+    }
+
+    section {
+      position: relative;
+    }
+
+    .section-pad {
+      padding: 100px 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--charcoal);
+    }
+
+    em {
+      font-style: normal;
+      font-weight: 700;
+      color: var(--teal-deep);
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--teal-deep);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .eyebrow::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    .section-head {
+      max-width: 60ch;
+      margin-bottom: 48px;
+    }
+
+    .section-title,
+    .section-title em {
+      font-size: clamp(30px, 3.4vw, 48px);
+      line-height: 1.12;
+      color: #2F3437 !important;
+    }
+
+    .section-desc {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--graphite);
+      margin-top: 16px;
+      max-width: 62ch;
+    }
+
+    .bg-tint {
+      background: var(--teal-tint);
+    }
+
+    .bg-sand {
+      background: var(--sand);
+    }
+
+    .btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 15px 30px;
+      border-radius: 40px;
+      transition: transform .25s ease, background .3s ease, color .3s ease, box-shadow .3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-solid {
+      background: var(--teal);
+      color: #fff;
+      box-shadow: 0 10px 24px -10px rgba(0, 90, 70, 0.55);
+    }
+
+    .btn-solid:hover {
+      background: var(--teal-deep);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--charcoal);
+      border: 1.5px solid var(--charcoal);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--teal);
+      color: var(--teal-deep);
+      transform: translateY(-2px);
+    }
+
+    /* ---------- reveal-on-scroll ---------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .8s cubic-bezier(.22, .61, .36, 1), transform .8s cubic-bezier(.22, .61, .36, 1);
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .stagger .reveal:nth-child(1) {
+      transition-delay: .02s;
+    }
+
+    .stagger .reveal:nth-child(2) {
+      transition-delay: .07s;
+    }
+
+    .stagger .reveal:nth-child(3) {
+      transition-delay: .12s;
+    }
+
+    .stagger .reveal:nth-child(4) {
+      transition-delay: .17s;
+    }
+
+    .stagger .reveal:nth-child(5) {
+      transition-delay: .22s;
+    }
+
+    .stagger .reveal:nth-child(6) {
+      transition-delay: .27s;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
+
+    /* =====================================================  NAV  ===================================================== */
+    .site-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 56px;
+      background: rgba(248, 248, 245, 0.92);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 1px 0 var(--line);
+      transition: padding .4s ease, background .4s ease, box-shadow .4s ease;
+    }
+
+    .site-nav.is-scrolled {
+      padding: 16px 56px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      color: var(--teal);
+    }
+
+    .nav-logo .dot {
+      color: var(--gold);
+    }
+
+    .nav-logo em {
+      color: var(--teal);
+      font-style: normal;
+      font-weight: 800;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--charcoal);
+      text-decoration: none;
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      transition: width .3s ease;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .nav-links a.active {
+      color: var(--teal-deep);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav-cta {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--charcoal);
+      text-decoration: none;
+      padding: 11px 22px;
+      border-radius: 30px;
+      transition: background .3s ease;
+      white-space: nowrap;
+    }
+
+    .nav-cta:hover {
+      background: var(--teal-deep);
+    }
+
+    @media (max-width:980px) {
+      .nav-links {
+        display: none;
+      }
+
+      .site-nav {
+        padding: 20px 24px;
+      }
+
+      .site-nav.is-scrolled {
+        padding: 14px 24px;
+      }
+    }
+
+    /* =====================================================  PAGE HEADER  ===================================================== */
+    .page-header {
+      padding: 170px 56px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(600px 300px at 15% 0%, rgba(0, 90, 70, 0.10), transparent 70%),
+        radial-gradient(600px 300px at 85% 10%, rgba(179, 122, 66, 0.10), transparent 70%);
+      pointer-events: none;
+    }
+
+    .page-header .eyebrow {
+      justify-content: center;
+    }
+
+    .page-header h1,
+    .page-header h1 em {
+      font-size: clamp(36px, 5vw, 62px);
+      line-height: 1.08;
+      max-width: 20ch;
+      margin: 0 auto;
+      color: #2F3437 !important;
+    }
+
+    .page-header p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--graphite);
+      max-width: 60ch;
+      margin: 22px auto 0;
+    }
+
+    .header-marks {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 34px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header-marks span {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--teal-deep);
+      background: #fff;
+      border: 1px solid var(--line);
+      padding: 8px 16px;
+      border-radius: 20px;
+    }
+
+    .header-marks span svg {
+      width: 15px;
+      height: 15px;
+      stroke: var(--teal-deep);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      margin-right: 6px;
+      vertical-align: -3px;
+    }
+
+    @media (max-width:980px) {
+      .page-header {
+        padding: 140px 24px 60px;
+      }
+    }
+
+    /* =====================================================  ABOUT COMPANY SPLIT  ===================================================== */
+    .about-split {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .about-copy p {
+      font-size: 15.5px;
+      line-height: 1.8;
+      color: var(--graphite);
+      margin-bottom: 18px;
+    }
+
+    .benefit-list {
+      list-style: none;
+      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .benefit-list li {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: var(--graphite);
+    }
+
+    .benefit-list .b-dot {
+      flex-shrink: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--teal-tint);
+      color: var(--teal-deep);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      margin-top: 1px;
+    }
+
+    .benefit-list b {
+      color: var(--charcoal);
+      font-weight: 600;
+    }
+
+    .about-side {
+      background: var(--teal-deep);
+      border-radius: 20px;
+      padding: 44px 34px;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-side .eyebrow {
+      color: rgba(248, 248, 245, 0.55);
+    }
+
+    .about-side .eyebrow::before {
+      background: var(--gold);
+    }
+
+    .about-side .since-label {
+      font-size: 13px;
+      letter-spacing: 0.3em;
+      color: rgba(248, 248, 245, 0.45);
+      margin-bottom: 18px;
+    }
+
+    .about-side h3 {
+      color: #fff;
+      font-size: clamp(22px, 2.4vw, 28px);
+      line-height: 1.3;
+      max-width: 16ch;
+      margin-bottom: 26px;
+    }
+
+    .about-side .quote-mark {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      font-size: 64px;
+      color: var(--teal);
+      line-height: 0.6;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .about-stat-row {
+      display: flex;
+      gap: 26px;
+      margin-top: 34px;
+      flex-wrap: wrap;
+    }
+
+    .about-stat-row div {
+      flex: 1 1 100px;
+    }
+
+    .about-stat-row .num {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      font-size: 28px;
+      color: var(--gold);
+    }
+
+    .about-stat-row .lbl {
+      font-size: 11.5px;
+      color: rgba(248, 248, 245, 0.6);
+      margin-top: 4px;
+    }
+
+    .about-side-img {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 18px 42px rgba(0, 90, 70, 0.12);
+      border: 1px solid rgba(0, 90, 70, 0.14);
+      height: 100%;
+      min-height: 440px;
+      background: #ffffff;
+    }
+
+    .about-side-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .about-side-img:hover img {
+      transform: scale(1.04);
+    }
+
+    @media (max-width:980px) {
+      .about-split {
+        grid-template-columns: 1fr;
+      }
+
+      .about-side-img {
+        min-height: 350px;
+      }
+    }
+
+    /* =====================================================  VISION / MISSION  ===================================================== */
+    .vm-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .vm-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 38px 34px;
+      transition: transform .35s cubic-bezier(.22, .61, .36, 1), box-shadow .35s ease;
+    }
+
+    .vm-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 26px 46px -26px rgba(22, 33, 31, 0.2);
+    }
+
+    .vm-card .vm-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: var(--teal-tint);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .vm-card h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .vm-card p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: var(--graphite);
+    }
+
+    .vm-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .vm-card ul li {
+      font-size: 14.5px;
+      line-height: 1.6;
+      color: var(--graphite);
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .vm-card ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    @media (max-width:820px) {
+      .vm-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* =====================================================  OUR VALUE  ===================================================== */
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .value-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 26px 20px;
+      transition: transform .35s cubic-bezier(.22, .61, .36, 1), box-shadow .35s ease;
+    }
+
+    .value-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 40px -24px rgba(22, 33, 31, 0.22);
+    }
+
+    .value-card .v-icon {
+      font-size: 24px;
+      margin-bottom: 14px;
+    }
+
+    .value-card h4 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--teal-deep);
+    }
+
+    .value-card p {
+      font-size: 12.5px;
+      line-height: 1.6;
+      color: var(--graphite);
+    }
+
+    @media (max-width:980px) {
+      .value-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width:560px) {
+      .value-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* =====================================================  MANUFACTURING STATS  ===================================================== */
+    .stat-strip {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      margin-bottom: 44px;
+    }
+
+    .stat-card {
+      flex: 1 1 220px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 30px 26px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .stat-card .s-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: var(--teal-tint);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .stat-card .s-num {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      font-size: 30px;
+      color: var(--charcoal);
+      line-height: 1;
+    }
+
+    .stat-card .s-lbl {
+      font-size: 12.5px;
+      color: var(--graphite);
+      margin-top: 6px;
+    }
+
+    .strength-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px 30px;
+    }
+
+    .strength-grid li {
+      list-style: none;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      font-size: 14.5px;
+      color: var(--graphite);
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .strength-grid li::before {
+      content: '✓';
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--teal);
+      color: #fff;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (max-width:700px) {
+      .strength-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* =====================================================  WHAT WE MANUFACTURE  ===================================================== */
+    .manu-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .manu-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 26px 22px;
+      text-align: center;
+      transition: transform .35s cubic-bezier(.22, .61, .36, 1), box-shadow .35s ease;
+    }
+
+    .manu-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 40px -24px rgba(22, 33, 31, 0.22);
+    }
+
+    .manu-card .m-icon {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .manu-card h4 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 14.5px;
+      font-weight: 700;
+    }
+
+    .manu-card.wide {
+      grid-column: span 2;
+    }
+
+    @media (max-width:820px) {
+      .manu-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .manu-card.wide {
+        grid-column: span 2;
+      }
+    }
+
+    @media (max-width:560px) {
+      .manu-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* =====================================================  ALL PRODUCTS ARE STRIP  ===================================================== */
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .badge-card {
+      flex: 1 1 200px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 26px 22px;
+      text-align: center;
+    }
+
+    .badge-card {
+      position: relative;
+      flex: 1 1 200px;
+      max-width: 230px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 32px 24px 40px;
+      text-align: center;
+    }
+
+    .badge-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 26px;
+      height: 26px;
+      border-top: 3px solid var(--teal);
+      border-left: 3px solid var(--teal);
+      border-top-left-radius: 18px;
+    }
+
+    .badge-card .icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      background: var(--teal-tint);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .badge-card .icon svg {
+      width: 26px;
+      height: 26px;
+      stroke: var(--teal);
+      fill: none;
+      stroke-width: 1.8;
+    }
+
+    .badge-card h4 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .badge-card .b-dash {
+      width: 26px;
+      height: 2px;
+      background: var(--teal);
+      margin: 0 auto 14px;
+    }
+
+    .badge-card p {
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: var(--graphite);
+    }
+
+    .badge-card .icon {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .badge-card h4 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .badge-card p {
+      font-size: 12.5px;
+      color: var(--graphite);
+      line-height: 1.5;
+    }
+
+    .badge-card {
+      position: relative;
+    }
+
+    .badge-card .b-dots {
+      position: absolute;
+      right: 16px;
+      bottom: 14px;
+      display: grid;
+      grid-template-columns: repeat(3, 4px);
+      gap: 4px;
+    }
+
+    .badge-card .b-dots span {
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: var(--teal);
+      opacity: .5;
+    }
+
+    /* =====================================================  SUSTAINABILITY POINTS  ===================================================== */
+    .sus-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .sus-points {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 26px;
+    }
+
+    .sus-points div {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px 20px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--teal-deep);
+    }
+
+    @media (max-width:820px) {
+      .sus-split {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .sus-right-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* =====================================================  NAME MEANING PROCESS  ===================================================== */
+    .process-flow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+
+    .process-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 150px;
+    }
+
+    .process-step .p-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--teal-tint);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--teal-deep);
+      font-family: 'Manrope', sans-serif;
+      margin-bottom: 12px;
+      border: 2px solid var(--teal);
+    }
+
+    .process-step .p-lbl {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--charcoal);
+      line-height: 1.4;
+    }
+
+    .process-arrow {
+      font-size: 20px;
+      color: var(--gold);
+      margin: 0 6px;
+      flex-shrink: 0;
+    }
+
+    @media (max-width:900px) {
+      .process-arrow {
+        transform: rotate(90deg);
+        margin: 6px 0;
+      }
+
+      .process-flow {
+        flex-direction: column;
+      }
+    }
+
+    /* =====================================================  EXPORT COUNTRIES  ===================================================== */
+    .country-row {
+      display: flex;
+      justify-content: center;
+      gap: 34px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .country-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* New: */
+    .country-flag {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #fff;
+      border: 2px solid var(--teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .country-flag img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      border-radius: 50%;
+    }
+
+    /* =====================================================  CTA BANNER  ===================================================== */
+    .brochure-banner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 50px 24px;
+      background: #EAF2F0;
+      border-top: 1px solid rgba(0, 90, 70, 0.12);
+    }
+
+    .brochure-banner .eyebrow {
+      color: var(--teal-deep);
+      justify-content: center;
+    }
+
+    .brochure-banner .eyebrow::before {
+      background: var(--gold);
+    }
+
+    .brochure-banner h2 {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      color: var(--teal-deep);
+      font-size: clamp(26px, 3.6vw, 44px);
+      max-width: 100%;
+      white-space: nowrap;
+    }
+
+    .brochure-banner h2 em {
+      font-style: normal;
+      font-weight: 700;
+      color: inherit;
+    }
+
+    .brochure-banner p {
+      font-size: 16px;
+      color: var(--graphite);
+      max-width: 52ch;
+      margin: 16px 0 32px;
+      line-height: 1.7;
+    }
+
+    .brochure-banner .btn-light {
+      background: var(--teal);
+      color: #ffffff;
+      border: 1px solid var(--teal);
+    }
+
+    .brochure-banner .btn-light:hover {
+      background: var(--teal-deep);
+      border-color: var(--teal-deep);
+      transform: translateY(-2px);
+    }
+
+    .brochure-banner .btn-outline {
+      background: transparent;
+      color: var(--teal-deep) !important;
+      border: 1.5px solid var(--teal) !important;
+      font-weight: 600;
+    }
+
+    .brochure-banner .btn-outline:hover {
+      background: var(--teal);
+      color: #ffffff !important;
+      border-color: var(--teal) !important;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .brochure-banner h2 {
+        white-space: normal;
+      }
+    }
+
+    .cta-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    /* =====================================================  FOOTER  ===================================================== */
+    footer {
+      background: var(--ink);
+      color: rgba(248, 248, 245, 0.72);
+      padding: 50px 0 24px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 44px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid rgba(248, 248, 245, 0.12);
+    }
+
+    .footer-logo {
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .footer-logo em {
+      font-style: normal;
+      color: var(--teal);
+      font-weight: 800;
+    }
+
+    .footer-logo .dot {
+      color: var(--gold);
+    }
+
+    .footer-tagline {
+      font-size: 13px;
+      color: rgba(248, 248, 245, 0.55);
+      margin-top: 14px;
+      max-width: 28ch;
+      line-height: 1.6;
+    }
+
+    .footer-col h4 {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(248, 248, 245, 0.45);
+      margin-bottom: 18px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+
+    .footer-col a {
+      font-size: 14px;
+      color: rgba(248, 248, 245, 0.8);
+      text-decoration: none;
+    }
+
+    .footer-col a:hover {
+      color: var(--gold);
+    }
+
+    .footer-col address {
+      font-style: normal;
+      font-size: 14px;
+      line-height: 1.8;
+      color: rgba(248, 248, 245, 0.72);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding-top: 24px;
+      font-size: 12px;
+      color: rgba(248, 248, 245, 0.4);
+    }
+
+    .footer-marks {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-marks span {
+      padding: 5px 12px;
+      border: 1px solid rgba(248, 248, 245, 0.18);
+      border-radius: 20px;
+    }
+
+    @media (max-width:900px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+      }
+    }
+
+    @media (max-width:560px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-pad {
+        padding: 70px 0;
+      }
+    }
+
+    /* =====================================================  WHATSAPP  ===================================================== */
+    .whatsapp-float {
+      position: fixed;
+      right: 26px;
+      bottom: 26px;
+      z-index: 90;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #1EBE5D;
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 18px;
+      border-radius: 30px;
+      box-shadow: 0 16px 30px -12px rgba(30, 190, 93, 0.55);
+      font-size: 13px;
+      font-weight: 600;
+      animation: floatBob 3.2s ease-in-out infinite;
+    }
+
+    .whatsapp-float svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    @keyframes floatBob {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-6px);
+      }
+    }
+
+    @media (max-width:560px) {
+      .whatsapp-float span {
+        display: none;
+      }
+
+      .whatsapp-float {
+        padding: 14px;
+      }
+    }
+
+    @media (max-width:980px) {
+      .wrap {
+        padding: 0 24px;
+      }
+    }
+
+
+    /* =====================================================  MARQUEE  ===================================================== */
+    .marquee-wrap {
+      overflow: hidden;
+      padding: 22px 0;
+      background: var(--ink);
+    }
+
+    .marquee-track {
+      display: flex;
+      white-space: nowrap;
+      width: max-content;
+      animation: marquee 30s linear infinite;
+    }
+
+    .marquee-track span {
+      font-family: 'Manrope', sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: clamp(15px, 1.7vw, 19px);
+      padding: 0 30px;
+      display: inline-flex;
+      align-items: center;
+      gap: 30px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .marquee-track span:nth-child(odd) {
+      color: var(--gold);
+    }
+
+    .marquee-track span:nth-child(even) {
+      color: var(--teal);
+      opacity: 0.85;
+    }
+
+    :root {
+      --teal: #00A86B;
+    }
+
+    .marquee-track span::after {
+      content: '\2726';
+      color: rgba(248, 248, 245, 0.45);
+      font-style: normal;
+      font-size: 12px;
+    }
+
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+
+
+    /* =====================================================
+   WHY PARTNERS CHOOSE CELVION
+===================================================== */
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: 42% 58%;
+      gap: 64px;
+      align-items: start;
+    }
+
+
+    .trust-title {
+      font-size: 58px;
+      line-height: 1.08;
+      margin-bottom: 22px;
+    }
+
+    .trust-desc {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--graphite);
+    }
+
+    /*
+.trust-right{
+  width:90%;
+  margin-left:auto;
+}*/
+
+    .trust-item {
+      background: #fff;
+      border: 1px solid rgba(47, 52, 55, 0.10);
+      border-radius: 24px;
+      padding: 18px 24px;
+      /* height reduce */
+      margin-bottom: 14px;
+      transition: all .45s ease;
+      overflow: hidden;
+    }
+
+    .trust-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .trust-head h3 {
+      font-size: 22px;
+      font-weight: 500;
+    }
+
+    .trust-number {
+      font-family: 'Manrope';
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--teal);
+      transition: all .35s ease;
+    }
+
+    .trust-content {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: all .45s ease;
+      color: var(--graphite);
+      line-height: 1.8;
+    }
+
+    .trust-item:hover {
+      background: #ECE7DF;
+      transform: translateY(-4px);
+      box-shadow: 0 20px 50px rgba(47, 52, 55, 0.08);
+      padding: 20px 24px;
+    }
+
+    .trust-item:hover .trust-number {
+      font-size: 30px;
+    }
+
+    .trust-item:hover .trust-content {
+      max-height: 100px;
+      opacity: 1;
+      padding-top: 10px;
+    }
+
+    .trust-head h3 {
+      font-size: 22px;
+      font-weight: 700;
+      transition: all .35s ease;
+    }
+
+    /* Hover par sirf title ka font chhota hoga */
+    .trust-item:hover .trust-head h3 {
+      font-size: 16px;
+    }
+
+    @media(max-width:980px) {
+      .trust-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* =====================================================
+VISION CARD ANIMATION
+==========================*/
+
+    .vision-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: center;
+      gap: 28px;
+      margin-top: 50px;
+    }
+
+    .vision-card {
+      position: relative;
+      width: 100%;
+      min-height: 220px;
+      background: #fff;
+      border-radius: 22px;
+      padding: 35px;
+      overflow: hidden;
+      transition: .45s;
+      cursor: pointer;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
+    }
+
+    .vision-card:hover {
+      transform: translateY(-10px) rotate(-2deg);
+    }
+
+    .vision-card:nth-child(2):hover {
+      transform: translateY(-10px);
+    }
+
+    .vision-card:nth-child(3):hover {
+      transform: translateY(-10px) rotate(2deg);
+    }
+
+    .vision-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #005A46, #0ea66f);
+      transform: translateY(100%);
+      transition: .45s;
+      z-index: 0;
+    }
+
+    .vision-card:hover::before {
+      transform: translateY(0);
+    }
+
+    .vision-card>* {
+      position: relative;
+      z-index: 2;
+    }
+
+    .vision-card h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #005A46;
+      transition: .35s;
+    }
+
+    .vision-card p {
+      color: #666;
+      line-height: 1.8;
+      transition: .35s;
+    }
+
+    .vision-card:hover h3,
+    .vision-card:hover p {
+      color: #fff;
+    }
+
+    .vision-card .number {
+      position: absolute;
+      right: 20px;
+      top: 18px;
+      font-size: 55px;
+      font-weight: 800;
+      color: rgba(0, 90, 70, .08);
+      transition: .35s;
+    }
+
+    .vision-card:hover .number {
+      color: rgba(255, 255, 255, .18);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: #F3F4F1;
+    }
+
+    .field-veil {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      opacity: .18;
+      pointer-events: none;
+    }
+
+    .field-veil path {
+      stroke: #4B5A3F;
+      stroke-width: 1.3;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+
+    /* NAME BEHIND BRAND - RIGHT IMAGE WITH PROCESS WHEEL ANIMATION */
+
+    .brand-name-layout {
+      display: grid !important;
+      grid-template-columns: 1fr 450px !important;
+      gap: 50px !important;
+      align-items: center !important;
+    }
+
+    @media (max-width: 980px) {
+      .brand-name-layout {
+        grid-template-columns: 1fr !important;
+      }
+
+      .brand-name-image {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+        width: 100% !important;
+        max-width: 450px !important;
+        margin: 0 auto !important;
+      }
+    }
+
+    .brand-name-content {
+      grid-column: 1 !important;
+    }
+
+    .brand-name-image {
+      grid-column: 2 !important;
+      grid-row: 1 !important;
+      width: 450px !important;
+      height: 590px !important;
+      position: relative !important;
+      overflow: hidden !important;
+      border-radius: 36px !important;
+      background: #ffffff !important;
+      box-shadow: 0 20px 45px rgba(0, 90, 70, 0.12) !important;
+      border: 1px solid rgba(0, 90, 70, 0.14) !important;
+    }
+
+    .brand-name-image img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: contain !important;
+      display: block !important;
+      transition: transform 0.6s ease;
+    }
+
+    .brand-name-image:hover img {
+      transform: scale(1.02);
+    }
+
+    .wheel-overlay-svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .wheel-arrow-path {
+      stroke: #005A46;
+      stroke-width: 2.5;
+      fill: none;
+      stroke-dasharray: 6 6;
+      animation: wheelDash 20s linear infinite;
+    }
+
+    .wheel-pulse-path {
+      stroke: #B37A42;
+      stroke-width: 3.5;
+      fill: none;
+      stroke-dasharray: 30 180;
+      animation: wheelPulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    @keyframes wheelDash {
+      to {
+        stroke-dashoffset: -360;
+      }
+    }
+
+    @keyframes wheelPulse {
+      0% {
+        stroke-dashoffset: 360;
+        opacity: 0.2;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        stroke-dashoffset: 0;
+        opacity: 0.2;
+      }
+    }
+
+    .step-node-badge {
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--teal-deep);
+      color: #ffffff;
+      font-family: 'Manrope', sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 64, 47, 0.35);
+      border: 2px solid #ffffff;
+      z-index: 3;
+      animation: badgeGlow 3s ease-in-out infinite;
+    }
+
+    @keyframes badgeGlow {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.15);
+        background: var(--gold-deep);
+      }
+    }
+
+
+    /* -------------------If CELVION were a person------------*/
+
+    .person-section-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .person-img-wrap {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 20px 45px rgba(0, 90, 70, 0.12);
+      border: 1px solid rgba(0, 90, 70, 0.14);
+      background: #ffffff;
+    }
+
+    .person-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .person-img-wrap:hover img {
+      transform: scale(1.03);
+    }
+
+    .person-img-badge {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      background: rgba(28, 58, 36, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-family: 'Manrope', sans-serif;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .person-img-badge .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    .archetype-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      max-width: 700px;
+    }
+
+    .archetype-card {
+      position: relative;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--teal);
+      border-radius: 16px;
+      padding: 20px 22px 34px;
+      overflow: hidden;
+    }
+
+    .archetype-card .a-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--teal-tint);
+      color: var(--teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+
+    .archetype-card .a-icon svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--teal);
+      fill: none;
+      stroke-width: 2;
+    }
+
+    .archetype-card h3 {
+      font-size: 20px;
+      display: inline;
+    }
+
+    .archetype-card h3 .a-sub {
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--graphite);
+      margin-left: 4px;
+    }
+
+    .archetype-card .a-dash {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin: 8px 0 14px;
+    }
+
+    .archetype-card .a-dash i {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--gold);
+      display: inline-block;
+    }
+
+    .archetype-card .a-dash b {
+      width: 28px;
+      height: 2px;
+      background: var(--teal);
+      display: inline-block;
+    }
+
+    .archetype-card p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--graphite);
+    }
+
+    .archetype-card .a-num {
+      position: absolute;
+      left: 26px;
+      bottom: -4px;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      font-size: 68px;
+      color: var(--teal-tint);
+      line-height: 1;
+      z-index: 0;
+    }
+
+    .archetype-card .a-wave {
+      position: absolute;
+      right: -10px;
+      bottom: -10px;
+      width: 75%;
+      height: 70px;
+      z-index: 0;
+      pointer-events: none;
+      opacity: .5;
+    }
+
+    .archetype-card .a-wave svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .archetype-card .a-wave path {
+      stroke: var(--teal);
+      stroke-width: 1.2;
+      fill: none;
+    }
+
+    @media (max-width:992px) {
+      .person-section-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+    }
+
+    @media (max-width:820px) {
+      .archetype-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .value-card {
+      position: relative;
+      overflow: hidden;
+      border: none;
+      /* border remove */
+      transition: all .45s cubic-bezier(.22, .61, .36, 1);
+      cursor: pointer;
+    }
+
+    .value-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #005A46, #B37A42);
+      transition: width .45s ease;
+    }
+
+    .value-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 50px rgba(0, 90, 70, .12);
+      background: #ffffff;
+    }
+
+    .value-card:hover::before {
+      width: 100%;
+    }
+
+    .value-card h3 {
+      transition: color .3s ease, transform .3s ease;
+    }
+
+    .value-card:hover h3 {
+      color: #005A46;
+      transform: translateY(-2px);
+    }
+
+    .value-card p {
+      transition: color .3s ease;
+    }
+
+    .value-card:hover p {
+      color: #2F3437;
+    }
+
+    .card-arrow {
+      position: absolute;
+      right: 22px;
+      bottom: 19px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #E4EEEC;
+      color: #005A46;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      transition: all .3s ease;
+    }
+
+    .value-card:hover .card-arrow {
+      background: #005A46;
+      color: #fff;
+      transform: translateX(4px);
+    }
+
+    /* TEXT ANIMATION */
+    .value-card h3 {
+      transition: transform .4s ease, color .4s ease;
+    }
+
+    .value-card p {
+      transition: transform .4s ease, color .4s ease;
+    }
+
+    .value-card:hover h3 {
+      transform: translateX(10px);
+      color: #005A46;
+    }
+
+    .value-card:hover p {
+      transform: translateX(10px);
+      color: #2F3437;
+    }
+
+    /* =====================================================
+   VISION, MISSION & PROMISE SECTION (ASSET IMAGES)
+===================================================== */
+    .vmp-section {
+      background-color: #f8f8f5;
+      padding: 80px 0;
+    }
+
+    .vmp-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .vmp-card {
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 14px 35px rgba(0, 64, 47, 0.08);
+      border: 1px solid rgba(0, 64, 47, 0.08);
+      background: #E4EEEA;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      display: flex;
+    }
+
+    .vmp-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 22px 45px rgba(0, 64, 47, 0.14);
+    }
+
+    .vmp-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 980px) {
+      .vmp-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="site-nav" id="siteNav">
+    <a href="index.html" class="nav-logo">CELVION</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="manufacturing.html">Manufacturing</a></li>
+      <li><a href="industries-careers.html">Industries &amp; Careers</a></li>
+      <li><a href="innovation-sustainability.html">Innovation &amp; Sustainability</a></li>
+      <li><a href="export.html">Export</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="contact.html" class="nav-cta">Get a Quote</a>
+      <a href="export.html" class="nav-cta" style="background:var(--charcoal);">Login</a>
+    </div>
+  </nav>
+
+  <!-- ============ PAGE HEADER ============ -->
+  <header class="page-header">
+    <div class="wrap" style="padding:0;">
+      <h1>Engineering sustainable <em>progress</em></h1>
+      <p>CELVION is a premium global brand engineering sustainable material solutions — helping industries transition
+        toward a more responsible future without compromising quality, performance, or commercial success.</p>
+      <div class="header-marks">
+        <span>Engineering Excellence</span><span>Sustainable Intelligence</span><span>150 Tons
+          Capacity</span><span>90,000 Sq. Mtr. Facility</span><span>Export Ready</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ CERTIFICATION MARQUEE ============ -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>Engineering Excellence</span><span>Sustainable Intelligence</span><span>Global Quality
+        Standards</span><span>Renewable Materials</span><span>Continuous Innovation</span><span>Customer
+        Partnership</span><span>Export Ready</span><span>Trusted Worldwide</span>
+      <span>Engineering Excellence</span><span>Sustainable Intelligence</span><span>Global Quality
+        Standards</span><span>Renewable Materials</span><span>Continuous Innovation</span><span>Customer
+        Partnership</span><span>Export Ready</span><span>Trusted Worldwide</span>
+    </div>
+  </div>
+
+  <!-- ============ ABOUT OUR COMPANY ============ -->
+  <section class="section-pad">
+    <div class="wrap">
+      <div class="about-split">
+        <div class="about-copy reveal">
+          <h2 class="section-title" style="margin-bottom:22px;">Engineering a better future through <em>intelligent
+              materials</em></h2>
+          <p>CELVION is a premium global brand engineering sustainable material solutions that help industries
+            transition toward a more responsible future. Built on the belief that innovation and sustainability should
+            work together, we develop high-performance alternatives to conventional packaging using renewable,
+            responsibly sourced, and environmentally conscious materials.</p>
+          <p>For decades, industries relied on materials that delivered convenience but often ignored their long-term
+            environmental consequences. Nature has already developed extraordinary materials — renewable, efficient, and
+            endlessly inspiring. Our challenge is not to reinvent nature, but to engineer its potential into solutions
+            that meet the expectations of a modern world.</p>
+
+          <ul class="benefit-list">
+            <li><span><b>Nature and Engineering</b> — Learning from natural systems, applied through precision
+                manufacturing.</span></li>
+            <li><span><b>Science and Responsibility</b> — Every material decision weighed for environmental and
+                commercial impact.</span></li>
+            <li><span><b>Innovation and Practicality</b> — Solutions built to work in the real world, at scale.</span>
+            </li>
+            <li><span><b>Global Thinking, Local Action</b> — International standards, delivered with local
+                responsibility.</span></li>
+          </ul>
+        </div>
+
+        <div class="about-side-img reveal">
+          <img src="assets/about_intelligent_materials.jpg"
+            alt="CELVION Intelligent Materials &amp; Eco-Friendly Tableware Production">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VISION, MISSION & PROMISE ============ -->
+  <section class="vmp-section">
+    <div class="wrap">
+      <div class="vmp-grid">
+        <!-- BRAND PROMISE -->
+        <div class="vmp-card reveal">
+          <img src="assets/BRAND PROMISE.jpg.jpeg" alt="BRAND PROMISE">
+        </div>
+
+        <!-- MISSION -->
+        <div class="vmp-card reveal">
+          <img src="assets/MISSION.jpg.jpeg" alt="MISSION">
+        </div>
+
+        <!-- VISION -->
+        <div class="vmp-card reveal">
+          <img src="assets/VISION.jpg.jpeg" alt="VISION">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CORE VALUES ============ -->
+  <section class="section-pad">
+    <div class="wrap">
+      <div class="section-head reveal" style="text-align:center; margin-left:auto; margin-right:auto;">
+        <h2 class="section-title">Our core <em>values</em></h2>
+        <p class="section-desc" style="margin-left:auto; margin-right:auto; text-align:center;">Values are not
+          statements displayed on office walls — they are principles demonstrated through daily decisions.</p>
+      </div>
+      <div class="value-grid stagger">
+        <div class="value-card reveal">
+          <h4>Responsibility</h4>
+          <p>Every decision carries environmental, social, and commercial consequences.</p>
+        </div>
+        <div class="value-card reveal">
+          <h4>Innovation</h4>
+          <p>We never stop questioning how things can be done better.</p>
+        </div>
+        <div class="value-card reveal">
+          <h4>Excellence</h4>
+          <p>Quality is engineered from the beginning, not inspected in at the end.</p>
+        </div>
+        <div class="value-card reveal">
+          <h4>Integrity</h4>
+          <p>Trust is earned through honesty, transparency, and accountability.</p>
+        </div>
+        <div class="value-card reveal">
+          <h4>Partnership</h4>
+          <p>Success is measured by the long-term value created together.</p>
+        </div>
+        <div class="value-card reveal">
+          <h4>Sustainability</h4>
+          <p>A mindset integrated into every part of the business, not a department.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ============ BRAND PRINCIPLES ============ -->
+  <!-- ============ BRAND PRINCIPLES ============ -->
+  <section class="section-pad bg-tint trust-section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="section-title">Principles we build <em>by</em></h2>
+        <p class="section-desc">Every employee, partner, supplier, designer, and business associate representing CELVION
+          upholds these principles.</p>
+      </div>
+      <div class="stagger" style="display:grid; grid-template-columns:1fr 1fr; gap:16px 24px; align-items:start;">
+        <div class="trust-item reveal">
+          <div class="trust-head">
+            <h3>Purpose Before Profit</h3><span class="trust-number">01</span>
+          </div>
+          <div class="trust-content">Long-term value is created by solving meaningful problems responsibly.</div>
+        </div>
+        <div class="trust-item reveal">
+          <div class="trust-head">
+            <h3>Innovation With Integrity</h3><span class="trust-number">02</span>
+          </div>
+          <div class="trust-content">Technology should advance sustainability — not compromise it.</div>
+        </div>
+        <div class="trust-item reveal">
+          <div class="trust-head">
+            <h3>Quality Without Compromise</h3><span class="trust-number">03</span>
+          </div>
+          <div class="trust-content">Every product represents our reputation.</div>
+        </div>
+        <div class="trust-item reveal">
+          <div class="trust-head">
+            <h3>Partnership Beyond Transactions</h3><span class="trust-number">04</span>
+          </div>
+          <div class="trust-content">We build relationships measured in decades, not purchase orders.</div>
+        </div>
+        <div class="trust-item reveal">
+          <div class="trust-head">
+            <h3>Global Standards, Local Responsibility</h3><span class="trust-number">05</span>
+          </div>
+          <div class="trust-content">We think internationally while acting responsibly in every market we serve.</div>
+        </div>
+        <div class="trust-item reveal">
+          <div class="trust-head">
+            <h3>Continuous Evolution</h3><span class="trust-number">06</span>
+          </div>
+          <div class="trust-content">Progress is a journey of constant improvement.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MANUFACTURING EXCELLENCE ============ -->
+  <section class="section-pad bg-sand">
+    <div class="wrap">
+      <div class="section-head reveal" style="text-align:center; margin-left:auto; margin-right:auto;">
+        <h2 class="section-title">Innovation is <em>our identity</em></h2>
+        <p class="section-desc" style="margin-left:auto; margin-right:auto;">Our production facility is equipped with
+          advanced machinery and strict quality control
+          systems. We follow globally accepted standards to deliver safe, hygienic, and reliable products.</p>
+      </div>
+
+      <div class="stat-strip stagger">
+        <div class="stat-card reveal">
+          <div class="s-icon">
+            <img src="assets\icon1.png" alt="Production Capacity">
+          </div>
+          <div>
+            <div class="s-num" data-count="150" data-suffix=" Tons">0</div>
+            <div class="s-lbl">Production Capacity</div>
+          </div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="s-icon">
+            <img src="assets/icon2.png" alt="Production Capacity">
+          </div>
+          <div>
+            <div class="s-num" data-count="150" data-suffix="+">0</div>
+            <div class="s-lbl">Dedicated Team Members</div>
+          </div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="s-icon">
+            <img src="assets/icon3.png" alt="Production Capacity">
+          </div>
+          <div>
+            <div class="s-num" data-count="90000" data-suffix=" m&sup2;">0</div>
+            <div class="s-lbl">Facility Footprint</div>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="font-size:18px; margin-bottom:20px;">Key Strengths Include</h3>
+      <ul class="strength-grid">
+        <li>Automated Production Lines</li>
+        <li>In-house Quality Testing Lab</li>
+        <li>Hygienic Packaging &amp; Handling</li>
+        <li>Bulk Production Capacity</li>
+        <li>Custom Product Development Capabilities</li>
+        <li>On-time Delivery for Domestic &amp; Export Markets</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ OUR CHARACTER ============ -->
+  <section class="section-pad">
+    <div class="wrap">
+      <div class="person-section-grid">
+
+        <!-- Left Column: Content & Archetypes -->
+        <div class="person-left-col">
+          <div class="section-head reveal">
+            <h2 class="section-title">If CELVION were a <em>person</em></h2>
+            <p class="section-desc">Intelligent, confident, calm, well-prepared, knowledgeable, innovative, trustworthy,
+              sophisticated, forward-thinking — never arrogant, never loud, never exaggerated. Confidence comes from
+              competence.</p>
+          </div>
+
+          <div class="header-marks" style="justify-content:flex-start; margin-top:0;">
+            <span><svg viewBox="0 0 24 24">
+                <path
+                  d="M9.5 2a3.5 3.5 0 0 0-3.5 3.5v.5A3 3 0 0 0 4 9v1a3 3 0 0 0-1 5.5V17a3 3 0 0 0 3 3h.5A3.5 3.5 0 0 0 9.5 22" />
+                <path
+                  d="M14.5 2a3.5 3.5 0 0 1 3.5 3.5v.5a3 3 0 0 1 2 2.5v1a3 3 0 0 1 1 5.5V17a3 3 0 0 1-3 3h-.5a3.5 3.5 0 0 1-3.5 2" />
+              </svg>Intelligent</span>
+            <span><svg viewBox="0 0 24 24">
+                <polyline points="3 17 9 11 13 15 21 7" />
+                <polyline points="15 7 21 7 21 13" />
+              </svg>Progressive</span>
+            <span><svg viewBox="0 0 24 24">
+                <path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5l8-3z" />
+                <path d="M9 12l2 2 4-4" />
+              </svg>Reliable</span>
+            <span><svg viewBox="0 0 24 24">
+                <path d="M2 6l5 3 5-6 5 6 5-3-2 12H4L2 6z" />
+              </svg>Premium</span>
+            <span><svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9" />
+                <circle cx="12" cy="12" r="5" />
+                <circle cx="12" cy="12" r="1" />
+              </svg>Purpose-Driven</span>
+          </div>
+          <div class="header-marks" style="justify-content:flex-start; margin-top:14px;">
+            <span><svg viewBox="0 0 24 24">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 21c0-4 3.5-7 8-7s8 3 8 7" />
+              </svg>Confident</span>
+            <span><svg viewBox="0 0 24 24">
+                <rect x="3" y="7" width="18" height="13" rx="2" />
+                <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+              </svg>Professional</span>
+            <span><svg viewBox="0 0 24 24">
+                <path d="M8 12l3 3 6-6" />
+                <path d="M2 12l4-4 4 2 4-3 4 3 4-2v6c0 4-6 7-9 8-3-1-9-4-9-8v-6z" />
+              </svg>Honest</span>
+            <span><svg viewBox="0 0 24 24">
+                <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>Visionary</span>
+            <span><svg viewBox="0 0 24 24">
+                <path d="M12 3L2 8l10 5 10-5-10-5z" />
+                <path d="M6 10v6c0 1.5 3 3 6 3s6-1.5 6-3v-6" />
+              </svg>Knowledgeable</span>
+          </div>
+
+          <div class="archetype-grid stagger" style="margin-top:32px;">
+            <div class="archetype-card reveal">
+              <h3>The Creator <span class="a-sub">— Primary Archetype</span></h3>
+              <div class="a-dash"><i></i><i></i><b></b></div>
+              <p>Driven by innovation, curiosity, engineering, and building better solutions.</p>
+              <div class="a-wave">
+                <svg viewBox="0 0 200 70" preserveAspectRatio="none">
+                  <path d="M0 55 C 50 55, 60 15, 110 20 S 170 45, 200 5" opacity="0.6" />
+                  <path d="M0 62 C 50 62, 65 30, 115 35 S 175 55, 200 20" opacity="0.35" />
+                </svg>
+              </div>
+            </div>
+            <div class="archetype-card reveal">
+              <h3>The Sage <span class="a-sub">— Secondary Archetype</span></h3>
+              <div class="a-dash"><i></i><i></i><b></b></div>
+              <p>Knowledge, research, expertise, and long-term thinking. Customers should feel they are working with
+                experts, not salespeople.</p>
+              <div class="a-wave">
+                <svg viewBox="0 0 200 70" preserveAspectRatio="none">
+                  <path d="M0 55 C 50 55, 60 15, 110 20 S 170 45, 200 5" opacity="0.6" />
+                  <path d="M0 62 C 50 62, 65 30, 115 35 S 175 55, 200 20" opacity="0.35" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Featured R&D Image -->
+        <div class="person-right-col reveal">
+          <div class="person-img-wrap">
+            <img src="assets/celvion_person.jpg" alt="CELVION Brand Persona - Research &amp; Innovation">
+            <div class="person-img-badge">
+              <span class="badge-dot"></span>
+              <span>RESEARCH &amp; INNOVATION LAB</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BRAND AT A GLANCE ============ -->
+  <section class="section-pad bg-tint">
+    <div class="wrap">
+      <div class="section-head reveal" style="text-align:center; margin-left:auto; margin-right:auto;">
+        <h2 class="section-title">CELVION at a <em>glance</em></h2>
+      </div>
+      <div class="badge-row stagger">
+        <div class="badge-card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24">
+              <circle cx="9" cy="8" r="3" />
+              <circle cx="17" cy="9" r="2.5" />
+              <path d="M3 20c0-3.5 3-6 6-6s6 2.5 6 6" />
+              <path d="M15 14c2.5 0 5 2 5 6" />
+            </svg></div>
+          <h4>Relationships</h4>
+          <div class="b-dash"></div>
+          <p>We build trusted, long-term relationships.</p>
+          <div class="b-dots"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="badge-card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24">
+              <path d="M3 20V10M9 20V4M15 20v-7M21 20V8" />
+              <path d="M17 6l4-4M17 2h4v4" />
+            </svg></div>
+          <h4>Partnerships</h4>
+          <div class="b-dash"></div>
+          <p>Together, we co-create value and navigate what's next.</p>
+          <div class="b-dots"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="badge-card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24">
+              <circle cx="12" cy="8" r="5" />
+              <path d="M8 13l-2 8 6-3 6 3-2-8" />
+            </svg></div>
+          <h4>Excellence</h4>
+          <div class="b-dash"></div>
+          <p>We set high standards and deliver.</p>
+          <div class="b-dots"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="badge-card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24">
+              <circle cx="9" cy="10" r="3" />
+              <circle cx="16" cy="10" r="2.5" />
+              <path d="M4 20c0-3 2.5-5.5 5-5.5s5 2.5 5 5.5" />
+              <path d="M14 14.5c2.2 0 4.5 2 4.5 5.5" />
+            </svg></div>
+          <h4>Candidness</h4>
+          <div class="b-dash"></div>
+          <p>We speak up, listen deeply, and grow together.</p>
+          <div class="b-dots"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="badge-card reveal">
+          <div class="icon"><svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="9" />
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 3v3M21 12h-3M12 21v-3" />
+            </svg></div>
+          <h4>Together</h4>
+          <div class="b-dash"></div>
+          <p>We win as one team with shared purpose.</p>
+          <div class="b-dots"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ POSITIONED ON VALUE, NOT PRICE ============ -->
+  <!-- ============ POSITIONED ON VALUE, NOT PRICE ============ -->
+  <section class="section-pad">
+    <div class="wrap">
+      <div class="sus-split">
+        <div class="reveal">
+          <h2 class="section-title">Positioned to compete on <em>value</em>, not price</h2>
+          <p class="section-desc">CELVION does not aspire to become another packaging manufacturer. Our strategy is
+            built around solving business challenges through intelligent material engineering — customers invest in
+            reliability, confidence, and long-term partnerships.</p>
+          <div class="sus-points">
+            <div>Sustainable Materials Company</div>
+            <div>Engineering-Driven Manufacturer</div>
+            <div>Innovation Partner</div>
+            <div>Quality-First Organization</div>
+            <div>Premium Global Brand</div>
+            <div>Long-Term Business Partner</div>
+          </div>
+        </div>
+
+        <!-- ============ POSITIONED ON VALUE, NOT PRICE ============ -->
+
+        <div class="sus-right-stack">
+
+          <div class="reveal value-card"
+            style="background:#fbfcfc; border-radius:20px; padding:50px 34px; text-align:center;">
+            <h3 style="color:var(--charcoal); font-size:20px; margin-bottom:12px;">
+              WHAT MAKES CELVION DIFFERENT
+            </h3>
+            <p style="color:var(--graphite); font-size:14px; line-height:1.9;">
+              An engineering-driven, quality-first sustainable materials company focused on innovation, global
+              standards, and long-term partnerships.
+            </p>
+            <div class="card-arrow">&rarr;</div>
+          </div>
+
+          <div class="reveal value-card"
+            style="background:#fbfcfc; border-radius:20px; padding:50px 34px; text-align:center;">
+            <h3 style="color:var(--charcoal); font-size:20px; margin-bottom:12px;">
+              OUR PHILOSOPHY
+            </h3>
+            <p style="color:var(--graphite); font-size:14px; line-height:1.9;">
+              We combine nature’s intelligence with engineering and innovation to create sustainable material solutions
+              that deliver long-term value and performance.
+            </p>
+            <div class="card-arrow">&rarr;</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE NAME BEHIND THE BRAND ============ -->
+  <section class="name-behind-section" style="background:#FAF7F2; padding:60px 0; border-top:1px solid rgba(0,90,70,0.06); border-bottom:1px solid rgba(0,90,70,0.06);">
+    <div class="wrap" style="max-width:1240px; margin:0 auto; padding:0 24px;">
+      <div class="name-behind-img-wrap" style="width:100%; text-align:center;">
+        <img src="assets/02.png" alt="The Name Behind The Brand - CELVION" style="width:100%; max-width:1200px; height:auto; display:block; margin:0 auto;">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GLOBAL EXPORTER ============ -->
+  <section class="section-pad" id="export">
+    <div class="wrap" style="text-align:center;">
+      <h2 class="section-title">Global exporter of <em>engineered</em> materials</h2>
+      <p class="section-desc" style="margin-left:auto; margin-right:auto;">CELVION is a trusted exporter of sustainable
+        material solutions — engineered from renewable resources, quality-tested to global standards, and delivered
+        reliably to partners across five continents.</p>
+      <div class="country-row">
+        <div class="country-card">
+          <div class="country-flag"><img src="https://hatscripts.github.io/circle-flags/flags/us.svg" alt="USA flag">
+          </div><span>USA</span>
+        </div>
+        <div class="country-card">
+          <div class="country-flag"><img src="https://hatscripts.github.io/circle-flags/flags/gb.svg" alt="UK flag">
+          </div><span>UK</span>
+        </div>
+        <div class="country-card">
+          <div class="country-flag"><img src="https://hatscripts.github.io/circle-flags/flags/ae.svg" alt="UAE flag">
+          </div><span>UAE</span>
+        </div>
+        <div class="country-card">
+          <div class="country-flag"><img src="https://hatscripts.github.io/circle-flags/flags/mu.svg"
+              alt="Mauritius flag"></div><span>Mauritius</span>
+        </div>
+        <div class="country-card">
+          <div class="country-flag"><img src="https://hatscripts.github.io/circle-flags/flags/au.svg"
+              alt="Australia flag"></div><span>Australia</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DOWNLOAD BROCHURE / CTA ============ -->
+  <section>
+    <div class="brochure-banner">
+      <h2>Partner with a name you can trust</h2>
+      <p style="max-width:850px; width:100%; margin:16px auto 32px; line-height:1.6;">From private-label development to
+        bulk export orders —<br>our team is ready to help you transition to engineered, sustainable material solutions.
+      </p>
+      <div class="cta-actions">
+        <a href="products.html" class="btn btn-light">Explore Products</a>
+        <a href="https://wa.me/917990441625?text=Hi%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20CELVION%20sustainable%20material%20solutions"
+          class="btn btn-outline" target="_blank" rel="noopener">Get a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="contact">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="footer-logo" style="text-decoration:none; display:inline-block;">CELVION</a>
+          <p class="footer-tagline">Inspired by Nature. Defined by Innovation. A premium global sustainable materials
+            company engineering renewable alternatives to conventional packaging.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="manufacturing.html">Manufacturing</a></li>
+            <li><a href="industries-careers.html">Industries &amp; Careers</a></li>
+            <li><a href="quality-resources.html">Quality &amp; Resources</a></li>
+            <li><a href="innovation-sustainability.html">Innovation &amp; Sustainability</a></li>
+            <li><a href="export.html">Export</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="products.html#round-plates">CELVION Serve&trade;</a></li>
+            <li><a href="products.html#compartment-plates">CELVION Fresh&trade;</a></li>
+            <li><a href="products.html#bowls">CELVION Bio&trade;</a></li>
+            <li><a href="products.html#clamshell">CELVION Pack&trade;</a></li>
+            <li><a href="products.html#lids-glass">CELVION Carry&trade;</a></li>
+            <li><a href="products.html#takeout">CELVION Fibre&trade;</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Corporate Office</h4>
+          <address>
+            1313–1314, 13th Floor, Fortune Business Hub,<br>
+            Nr. Shell Petrol Pump, Science City Road,<br>
+            Sola, Ahmedabad – 380060, Gujarat, India
+          </address>
+          <ul style="margin-top:16px;">
+            <li><a href="tel:+917990441625">+91 7990441625</a></li>
+            <li><a href="mailto:sales@sngecoindia.com">sales@sngecoindia.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 SNG Eco India Pvt Ltd. All rights reserved.</span>
+        <div class="footer-marks">
+          <span>Engineering Excellence</span><span>Global Quality Standards</span><span>Renewable
+            Materials</span><span>Export Ready</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ FLOATING WHATSAPP ============ -->
+  <a href="https://wa.me/917990441625?text=Hi%2C%20I%27m%20interested%20in%20CELVION%20sustainable%20material%20solutions"
+    class="whatsapp-float" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none">
+      <circle cx="12" cy="12" r="11" fill="#ffffff" opacity="0.15" />
+      <path d="M7 17l0.9-3.2A6 6 0 1 1 10.8 17L7 17z" stroke="#fff" stroke-width="1.4" stroke-linejoin="round" />
+      <path d="M9.3 10.6c0 2.3 2 4.2 4.3 4.2" stroke="#fff" stroke-width="1.4" stroke-linecap="round" />
+    </svg>
+    <span>Chat with us</span>
+  </a>
+
+  <script>
+    // Nav shrink on scroll
+    const nav = document.getElementById('siteNav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) nav.classList.add('is-scrolled');
+      else nav.classList.remove('is-scrolled');
+    }, { passive: true });
+
+    // Reveal-on-scroll
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    revealEls.forEach((el) => io.observe(el));
+
+    // Animated stat counters (generic — works on any element with data-count)
+    const counters = document.querySelectorAll('[data-count]');
+    const counterIO = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.getAttribute('data-count'), 10);
+          const suffix = el.getAttribute('data-suffix') || '';
+          const duration = 1200;
+          const start = performance.now();
+          function tick(now) {
+            const p = Math.min(1, (now - start) / duration);
+            const eased = 1 - Math.pow(1 - p, 3);
+            const val = Math.floor(eased * target);
+            el.innerHTML = val.toLocaleString('en-IN') + suffix;
+            if (p < 1) requestAnimationFrame(tick);
+          }
+          requestAnimationFrame(tick);
+          counterIO.unobserve(el);
+        }
+      });
+    }, { threshold: 0.4 });
+    counters.forEach((el) => counterIO.observe(el));
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Industries &amp; Careers — CELVION | Inspired by Nature. Defined by Innovation.</title>
+  <meta name="description"
+    content="Explore the industries CELVION serves and build your career with a global leader in sustainable material solutions and packaging innovation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --teal: #005A46;
+      --teal-deep: #00402F;
+      --teal-tint: #E4EEEC;
+      --gold: #B37A42;
+      --gold-deep: #8C5F30;
+      --gold-tint: #F3E6D8;
+      --ink: #2F3437;
+      --cream: #F8F8F5;
+      --sand: #ECE7DF;
+      --charcoal: #2F3437;
+      --graphite: #5C6469;
+      --line: rgba(47, 52, 55, 0.14);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--charcoal);
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    ::selection {
+      background: var(--teal);
+      color: var(--cream);
+    }
+
+    .wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 56px;
+    }
+
+    section {
+      position: relative;
+    }
+
+    .section-pad {
+      padding: 100px 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--charcoal);
+    }
+
+    em {
+      font-style: normal;
+      font-weight: 700;
+      color: var(--teal-deep);
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--teal-deep);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .eyebrow::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    .section-head {
+      max-width: 800px;
+      margin-bottom: 56px;
+    }
+
+    .section-title,
+    .section-title em {
+      font-size: clamp(30px, 3.4vw, 46px);
+      line-height: 1.12;
+      color: #2F3437 !important;
+    }
+
+    .section-desc {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--graphite);
+      margin-top: 16px;
+      max-width: 62ch;
+    }
+
+    .bg-tint {
+      background: var(--teal-tint);
+    }
+
+    .bg-sand {
+      background: var(--sand);
+    }
+
+    .bg-dark {
+      background: var(--teal-deep);
+      color: #fff;
+    }
+
+    .bg-dark h1,
+    .bg-dark h2,
+    .bg-dark h3,
+    .bg-dark h4 {
+      color: #fff;
+    }
+
+    .bg-dark .eyebrow {
+      color: var(--gold);
+    }
+
+    .bg-dark .eyebrow::before {
+      background: #fff;
+    }
+
+    .bg-dark p {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 15px 30px;
+      border-radius: 40px;
+      transition: transform .25s ease, background .3s ease, color .3s ease, box-shadow .3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-solid {
+      background: var(--teal);
+      color: #fff;
+      box-shadow: 0 10px 24px -10px rgba(0, 90, 70, 0.55);
+    }
+
+    .btn-solid:hover {
+      background: var(--teal-deep);
+      transform: translateY(-2px);
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #fff;
+      box-shadow: 0 10px 24px -10px rgba(179, 122, 66, 0.55);
+    }
+
+    .btn-gold:hover {
+      background: var(--gold-deep);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--charcoal);
+      border: 1.5px solid var(--charcoal);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--teal);
+      color: var(--teal-deep);
+      transform: translateY(-2px);
+    }
+
+    /* reveal-on-scroll */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .8s cubic-bezier(.22, .61, .36, 1), transform .8s cubic-bezier(.22, .61, .36, 1);
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .stagger .reveal:nth-child(1) {
+      transition-delay: .02s;
+    }
+
+    .stagger .reveal:nth-child(2) {
+      transition-delay: .07s;
+    }
+
+    .stagger .reveal:nth-child(3) {
+      transition-delay: .12s;
+    }
+
+    .stagger .reveal:nth-child(4) {
+      transition-delay: .17s;
+    }
+
+    .stagger .reveal:nth-child(5) {
+      transition-delay: .22s;
+    }
+
+    .stagger .reveal:nth-child(6) {
+      transition-delay: .27s;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
+
+    /* SITE NAV */
+    .site-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 56px;
+      background: rgba(248, 248, 245, 0.92);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 1px 0 var(--line);
+      transition: padding .4s ease, background .4s ease, box-shadow .4s ease;
+    }
+
+    .site-nav.is-scrolled {
+      padding: 16px 56px;
+    }
+
+    .nav-logo {
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      color: var(--teal);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--charcoal);
+      text-decoration: none;
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      transition: width .3s ease;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .nav-links a.active {
+      color: var(--teal-deep);
+      font-weight: 700;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .nav-cta {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--teal);
+      text-decoration: none;
+      padding: 11px 22px;
+      border-radius: 30px;
+      transition: background .3s ease, transform .2s ease;
+      white-space: nowrap;
+    }
+
+    .nav-cta:hover {
+      background: var(--teal-deep);
+      transform: translateY(-1px);
+    }
+
+    @media (max-width:1100px) {
+      .nav-links {
+        display: none;
+      }
+
+      .site-nav {
+        padding: 20px 24px;
+      }
+
+      .site-nav.is-scrolled {
+        padding: 14px 24px;
+      }
+    }
+
+    /* PAGE HEADER */
+    .page-header {
+      padding: 170px 56px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(600px 300px at 15% 0%, rgba(0, 90, 70, 0.08), transparent 70%),
+        radial-gradient(600px 300px at 85% 10%, rgba(179, 122, 66, 0.08), transparent 70%);
+      pointer-events: none;
+    }
+
+    .page-header .eyebrow {
+      justify-content: center;
+    }
+
+    .page-header h1,
+    .page-header h1 em {
+      font-size: clamp(36px, 4.8vw, 60px);
+      line-height: 1.1;
+      max-width: 22ch;
+      margin: 0 auto;
+      color: #2F3437 !important;
+    }
+
+    .page-header p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--graphite);
+      max-width: 62ch;
+      margin: 22px auto 0;
+    }
+
+    .header-marks {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 34px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header-marks span {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--teal-deep);
+      background: #fff;
+      border: 1px solid var(--line);
+      padding: 8px 18px;
+      border-radius: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+
+    @media (max-width:980px) {
+      .page-header {
+        padding: 140px 24px 60px;
+      }
+    }
+
+    /* CARDS GRID */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 36px;
+    }
+
+    @media (max-width:980px) {
+      .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width:640px) {
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 36px;
+      border: 1px solid var(--line);
+      transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 36px -12px rgba(47, 52, 55, 0.09);
+      border-color: var(--teal);
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--teal-tint);
+      color: var(--teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    .card h3 {
+      font-size: 22px;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--graphite);
+    }
+
+    .card-list {
+      list-style: none;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card-list li {
+      font-size: 14px;
+      color: var(--charcoal);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-list li::before {
+      content: '✓';
+      color: var(--teal);
+      font-weight: 700;
+    }
+
+    /* SEGMENTATION TABLE / CARDS */
+    .segment-card {
+      background: var(--cream);
+      border-radius: 16px;
+      padding: 32px;
+      border: 1px solid var(--line);
+    }
+
+    .segment-badge {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gold-deep);
+      background: var(--gold-tint);
+      padding: 4px 12px;
+      border-radius: 12px;
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+
+    /* TIMELINE / PHASES */
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .phase-box {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px;
+      border-top: 4px solid var(--teal);
+      border-left: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .phase-box.p2 {
+      border-top-color: var(--gold);
+    }
+
+    .phase-box.p3 {
+      border-top-color: var(--charcoal);
+    }
+
+    .phase-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .phase-desc {
+      font-size: 14px;
+      color: var(--graphite);
+      line-height: 1.6;
+    }
+
+    @media (max-width:800px) {
+      .timeline {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* JOBS LIST */
+    .job-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px 36px;
+      border: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      transition: border-color .3s ease, box-shadow .3s ease;
+      margin-bottom: 20px;
+    }
+
+    .job-card:hover {
+      border-color: var(--teal);
+      box-shadow: 0 12px 28px -10px rgba(0, 0, 0, 0.06);
+    }
+
+    .job-info h3 {
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+
+    .job-meta {
+      font-size: 13.5px;
+      color: var(--graphite);
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .job-meta span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    @media (max-width:700px) {
+      .job-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    /* FORM */
+    .apply-form {
+      background: #fff;
+      border-radius: 20px;
+      padding: 44px;
+      border: 1px solid var(--line);
+      max-width: 800px;
+      margin: 40px auto 0;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--charcoal);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      padding: 14px 18px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: var(--cream);
+      color: var(--charcoal);
+      outline: none;
+      transition: border-color .2s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--teal);
+      background: #fff;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background: var(--charcoal);
+      color: #fff;
+      padding: 50px 0 24px;
+      font-size: 14px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 48px;
+      margin-bottom: 36px;
+    }
+
+    .footer-brand p {
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 16px;
+      line-height: 1.7;
+      max-width: 34ch;
+    }
+
+    .footer-col h4 {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-col a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: color .2s ease;
+    }
+
+    .footer-col a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 13px;
+    }
+
+    .footer-marks {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-marks span {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.7);
+      background: rgba(255, 255, 255, 0.06);
+      padding: 4px 12px;
+      border-radius: 12px;
+    }
+
+    @media (max-width:980px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width:560px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 90;
+      background: #25D366;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 10px 24px rgba(37, 211, 102, 0.4);
+      transition: transform .25s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.05);
+    }
+
+    .whatsapp-float svg {
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SITE NAV -->
+  <nav class="site-nav" id="siteNav">
+    <a href="index.html" class="nav-logo">CELVION</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="manufacturing.html">Manufacturing</a></li>
+      <li><a href="industries-careers.html" class="active">Industries &amp; Careers</a></li>
+      <li><a href="innovation-sustainability.html">Innovation &amp; Sustainability</a></li>
+      <li><a href="export.html">Export</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="contact.html" class="nav-cta">Get a Quote</a>
+      <a href="export.html" class="nav-cta" style="background:var(--charcoal);">Login</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="wrap" style="padding:0;">
+      <h1>Industries We Serve <em>&amp; Global Careers</em></h1>
+      <p>Engineered material solutions tailored for international commercial sectors, paired with career opportunities
+        for visionaries driven to shape sustainable material science.</p>
+      <div class="header-marks">
+        <span>Foodservice &amp; QSR</span><span>Industrial Packaging</span><span>Healthcare Solutions</span><span>Global
+          Talent Network</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- INDUSTRIES WE SERVE -->
+  <section class="section-pad">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="section-title">Enabling key sectors to transition<br>to <em>intelligent materials</em></h2>
+        <p class="section-desc">CELVION works with industry leaders worldwide to deliver customized plant fibre
+          formulations and packaging formats that balance operational efficiency with ESG objectives.</p>
+      </div>
+
+      <div class="grid-3 stagger">
+        <div class="card reveal">
+          <div>
+            <div class="card-icon">01</div>
+            <h3>Foodservice &amp; QSRs</h3>
+            <p>High-volume, heat-resistant, and oil-proof plant fibre plates, bowls, and compartment meal boxes
+              engineered for delivery networks and retail chains.</p>
+            <ul class="card-list">
+              <li>CELVION Serve™ &amp; Fresh™ Series</li>
+              <li>Microwave &amp; Freezer Safe</li>
+              <li>Zero Plastic Lamination</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div>
+            <div class="card-icon">02</div>
+            <h3>Industrial Manufacturing</h3>
+            <p>Heavy-duty protective trays and structural fibre cushioning that safeguard electronic components and
+              machinery parts during domestic &amp; global transit.</p>
+            <ul class="card-list">
+              <li>CELVION Pack™ Industrial Trays</li>
+              <li>Precision Shock Absorption</li>
+              <li>Standardized Export Pallet Sizes</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div>
+            <div class="card-icon">03</div>
+            <h3>Healthcare &amp; Hygiene</h3>
+            <p>Medical-grade, sterile-compatible sustainable packaging designed for single-use medical consumables and
+              pharmaceutical secondary packaging.</p>
+            <ul class="card-list">
+              <li>Toxin-Free Raw Material Base</li>
+              <li>ISO Clean-Room Manufacturing</li>
+              <li>Strict Batch Traceability</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div>
+            <div class="card-icon">04</div>
+            <h3>Retail &amp; Luxury Goods</h3>
+            <p>Custom-moulded premium packaging featuring refined tactile surfaces, copper-bronze detailing, and rigid
+              structural integrity for high-end consumer brands.</p>
+            <ul class="card-list">
+              <li>Custom Embossing &amp; Debossing</li>
+              <li>Soft Sand &amp; White Finishes</li>
+              <li>Unboxing Experience Standards</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div>
+            <div class="card-icon">05</div>
+            <h3>Circular Economy &amp; Consulting</h3>
+            <p>Strategic partnerships with global enterprises to re-engineer waste streams and implement closed-loop
+              material recovery frameworks.</p>
+            <ul class="card-list">
+              <li>Material Science R&amp;D</li>
+              <li>ESG Compliance Audits</li>
+              <li>Compostability Certification Support</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div>
+            <div class="card-icon">06</div>
+            <h3>Institutional &amp; Government</h3>
+            <p>Large-scale supply agreements for public institutions, educational campuses, and airline caterers
+              replacing single-use plastics.</p>
+            <ul class="card-list">
+              <li>High Capacity Output</li>
+              <li>Consistent Supply Guarantees</li>
+              <li>International Regulatory Clearance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTOMER SEGMENTATION & GEOGRAPHIC ROADMAP -->
+  <section class="section-pad bg-sand">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="section-title">Tailored partnerships for <em>every commercial scale</em></h2>
+        <p class="section-desc">From multinational brand owners to regional distributors, CELVION provides structured
+          engagement tiers and global supply chain readiness.</p>
+      </div>
+
+      <div class="grid-3 stagger">
+        <div class="segment-card reveal">
+          <span class="segment-badge">Tier 01 &middot; Strategic Customers</span>
+          <h3>Global Brands &amp; OEM Partners</h3>
+          <p style="font-size:14.5px; color:var(--graphite); line-height:1.65; margin-top:12px;">Global retail chains,
+            QSR conglomerates, institutional buyers, and large OEM partners requiring dedicated production lines and
+            custom mould R&amp;D.</p>
+        </div>
+
+        <div class="segment-card reveal">
+          <span class="segment-badge">Tier 02 &middot; Growth Customers</span>
+          <h3>Importers &amp; Regional Distributors</h3>
+          <p style="font-size:14.5px; color:var(--graphite); line-height:1.65; margin-top:12px;">Established packaging
+            importers, wholesale distributors, and regional manufacturers extending their eco-portfolio with CELVION
+            export-grade solutions.</p>
+        </div>
+
+        <div class="segment-card reveal">
+          <span class="segment-badge">Tier 03 &middot; Emerging Customers</span>
+          <h3>D2C Innovators &amp; Startups</h3>
+          <p style="font-size:14.5px; color:var(--graphite); line-height:1.65; margin-top:12px;">Fast-growing
+            sustainable brands seeking premium standard stock items, low MOQ initial runs, and rapid sample prototyping.
+          </p>
+        </div>
+      </div>
+
+      <!-- Geographic Expansion Timeline -->
+      <div style="margin-top:72px;" class="reveal">
+        <h3 style="font-size:26px; margin-bottom:12px;">Global Reach Expansion Strategy</h3>
+        <p style="color:var(--graphite); font-size:15px; max-width:60ch;">Our multi-phase international deployment
+          roadmap ensures reliable regional support and local market regulatory compliance.</p>
+
+        <div class="timeline">
+          <div class="phase-box">
+            <div class="phase-title">Phase 1 &middot; Foundation Markets</div>
+            <div class="phase-desc">India &middot; Middle East &middot; Africa &middot; South Asia</div>
+          </div>
+          <div class="phase-box p2">
+            <div class="phase-title">Phase 2 &middot; Growth Expansion</div>
+            <div class="phase-desc">Europe &middot; United Kingdom &middot; Australia &middot; New Zealand &middot;
+              Canada</div>
+          </div>
+          <div class="phase-box p3">
+            <div class="phase-title">Phase 3 &middot; Global Footprint</div>
+            <div class="phase-desc">United States &middot; Latin America &middot; Japan &middot; South Korea &middot;
+              Scandinavia</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAREERS SECTION -->
+  <section class="section-pad" id="careers">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="section-title">Build a meaningful career in <em>sustainable innovation</em></h2>
+        <p class="section-desc">At CELVION, we believe iconic companies are defined by the principles they represent. We
+          bring together engineers, scientists, designers, and market strategists committed to transforming global
+          materials.</p>
+      </div>
+
+      <div class="grid-2 stagger" style="margin-bottom:60px;">
+        <div class="card reveal" style="background:var(--teal-tint); border:none;">
+          <h3 style="color:var(--teal-deep);">Purpose Before Profit</h3>
+          <p style="color:var(--charcoal); margin-top:12px;">We prioritize work that creates tangible, measurable value
+            for communities and the environment over short-term shortcuts.</p>
+        </div>
+        <div class="card reveal" style="background:var(--gold-tint); border:none;">
+          <h3 style="color:var(--gold-deep);">Continuous Evolution</h3>
+          <p style="color:var(--charcoal); margin-top:12px;">Through the CELVION Academy™, team members access
+            continuous technical training, material science research, and leadership growth.</p>
+        </div>
+      </div>
+
+      <!-- OPEN POSITIONS -->
+      <h3 class="reveal" style="font-size:28px; margin-bottom:28px;">Open Opportunities</h3>
+
+      <div class="reveal">
+        <div class="job-card">
+          <div class="job-info">
+            <h3>Senior Material Science Engineer</h3>
+            <div class="job-meta">
+              <span><strong>Department:</strong> R&amp;D / CELVION Lab™</span>
+              <span><strong>Location:</strong> Ahmedabad, India</span>
+              <span><strong>Type:</strong> Full-Time</span>
+            </div>
+          </div>
+          <a href="#apply" class="btn btn-solid">Apply Now</a>
+        </div>
+
+        <div class="job-card">
+          <div class="job-info">
+            <h3>Global Export Account Manager</h3>
+            <div class="job-meta">
+              <span><strong>Department:</strong> International Sales</span>
+              <span><strong>Location:</strong> Hybrid / HQ</span>
+              <span><strong>Type:</strong> Full-Time</span>
+            </div>
+          </div>
+          <a href="#apply" class="btn btn-solid">Apply Now</a>
+        </div>
+
+        <div class="job-card">
+          <div class="job-info">
+            <h3>Industrial Packaging Design Specialist</h3>
+            <div class="job-meta">
+              <span><strong>Department:</strong> Custom Engineering</span>
+              <span><strong>Location:</strong> Ahmedabad, India</span>
+              <span><strong>Type:</strong> Full-Time</span>
+            </div>
+          </div>
+          <a href="#apply" class="btn btn-solid">Apply Now</a>
+        </div>
+
+        <div class="job-card">
+          <div class="job-info">
+            <h3>Quality Assurance &amp; Compliance Lead</h3>
+            <div class="job-meta">
+              <span><strong>Department:</strong> Quality Operations</span>
+              <span><strong>Location:</strong> Manufacturing Facility</span>
+              <span><strong>Type:</strong> Full-Time</span>
+            </div>
+          </div>
+          <a href="#apply" class="btn btn-solid">Apply Now</a>
+        </div>
+      </div>
+
+      <!-- APPLICATION FORM -->
+      <div class="apply-form reveal" id="apply">
+        <div style="text-align:center; margin-bottom:32px;">
+          <h2 style="font-size:32px;">Submit Your Candidate Profile</h2>
+          <p style="color:var(--graphite); font-size:15px; margin-top:8px;">Ready to innovate with purpose? Complete the
+            form below and our talent acquisition team will be in touch.</p>
+        </div>
+
+        <form id="careerForm" onsubmit="handleCareerSubmit(event)">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="cName">Full Name *</label>
+              <input type="text" id="cName" required placeholder="e.g. Rahul Sharma">
+            </div>
+            <div class="form-group">
+              <label for="cEmail">Email Address *</label>
+              <input type="email" id="cEmail" required placeholder="name@domain.com">
+            </div>
+            <div class="form-group">
+              <label for="cPhone">Phone Number *</label>
+              <input type="tel" id="cPhone" required placeholder="+91 98765 43210">
+            </div>
+            <div class="form-group">
+              <label for="cPosition">Position Applied For *</label>
+              <select id="cPosition" required>
+                <option value="">Select an open position...</option>
+                <option value="Material Engineer">Senior Material Science Engineer</option>
+                <option value="Export Manager">Global Export Account Manager</option>
+                <option value="Packaging Designer">Industrial Packaging Design Specialist</option>
+                <option value="QA Lead">Quality Assurance Lead</option>
+                <option value="General Spontaneous">General Application / Future Role</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label for="cNote">Professional Background &amp; Motivation *</label>
+              <textarea id="cNote" rows="4" required
+                placeholder="Briefly introduce your relevant experience, technical expertise, and why you wish to join CELVION..."></textarea>
+            </div>
+          </div>
+          <div style="text-align:center;">
+            <button type="submit" class="btn btn-gold"
+              style="width:100%; max-width:320px; justify-content:center;">Submit Application</button>
+          </div>
+          <div id="formSuccess"
+            style="display:none; text-align:center; margin-top:20px; color:var(--teal-deep); font-weight:600; background:var(--teal-tint); padding:14px; border-radius:10px;">
+            Thank you! Your candidate profile has been submitted successfully. Our team will review your details.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="footer-logo"
+            style="text-decoration:none; display:inline-block; font-family:'Manrope',sans-serif; font-size:22px; font-weight:800; color:#fff;">CELVION</a>
+          <p class="footer-tagline"
+            style="color:rgba(255,255,255,0.7); margin-top:16px; line-height:1.7; max-width:34ch;">Inspired by Nature.
+            Defined by Innovation. A premium global sustainable materials
+            company engineering renewable alternatives to conventional packaging.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="manufacturing.html">Manufacturing</a></li>
+            <li><a href="industries-careers.html">Industries &amp; Careers</a></li>
+            <li><a href="quality-resources.html">Quality &amp; Resources</a></li>
+            <li><a href="innovation-sustainability.html">Innovation &amp; Sustainability</a></li>
+            <li><a href="export.html">Export</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="products.html#serve">CELVION Serve&trade;</a></li>
+            <li><a href="products.html#fresh">CELVION Fresh&trade;</a></li>
+            <li><a href="products.html#bio">CELVION Bio&trade;</a></li>
+            <li><a href="products.html#pack">CELVION Pack&trade;</a></li>
+            <li><a href="products.html#carry">CELVION Carry&trade;</a></li>
+            <li><a href="products.html#fibre">CELVION Fibre&trade;</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Corporate Office</h4>
+          <address style="font-style:normal; color:rgba(255,255,255,0.7); line-height:1.6;">
+            1313–1314, 13th Floor, Fortune Business Hub,<br>
+            Nr. Shell Petrol Pump, Science City Road,<br>
+            Sola, Ahmedabad – 380060, Gujarat, India
+          </address>
+          <ul style="margin-top:16px;">
+            <li><a href="tel:+917990441625">+91 7990441625</a></li>
+            <li><a href="mailto:sales@sngecoindia.com">sales@sngecoindia.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 SNG Eco India Pvt Ltd. All rights reserved.</span>
+        <div class="footer-marks">
+          <span>Engineering Excellence</span><span>Global Quality Standards</span><span>Renewable
+            Materials</span><span>Export Ready</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/917990441625?text=Hi%2C%20I%27m%20interested%20in%20CELVION%20industries%20and%20careers"
+    class="whatsapp-float" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24">
+      <path
+        d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.764.459 3.487 1.333 5.006l-1.417 5.176 5.297-1.389c1.472.802 3.136 1.224 4.773 1.225h.004c5.505 0 9.988-4.478 9.989-9.985 0-2.668-1.039-5.176-2.927-7.062s-4.4-2.939-7.062-2.939zm5.95 14.156c-.25.707-1.464 1.348-2.023 1.428-.521.074-1.2.109-1.936-.127-.446-.143-1.018-.328-1.766-.653-3.14-1.365-5.184-4.551-5.342-4.761-.157-.21-1.282-1.706-1.282-3.254 0-1.547.812-2.308 1.101-2.617.289-.309.631-.387.842-.387.21 0 .421.002.605.011.196.009.46-.074.721.552.263.626.894 2.181.972 2.339.079.158.131.342.026.552-.105.21-.157.342-.315.526-.158.184-.332.411-.473.552-.158.158-.323.328-.139.643.184.315.818 1.35 1.758 2.186 1.208 1.076 2.226 1.41 2.541 1.567.315.158.5.131.684-.079.184-.21.788-.919.998-1.234.21-.315.42-.263.709-.158.289.105 1.838.867 2.153 1.024.315.158.526.236.605.368.079.131.079.761-.171 1.468z" />
+    </svg>
+    <span>Chat with us</span>
+  </a>
+
+  <script>
+    // Nav shrink on scroll
+    const nav = document.getElementById('siteNav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) nav.classList.add('is-scrolled');
+      else nav.classList.remove('is-scrolled');
+    }, { passive: true });
+
+    // Reveal-on-scroll
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach((el) => io.observe(el));
+
+    function handleCareerSubmit(e) {
+      e.preventDefault();
+      document.getElementById('formSuccess').style.display = 'block';
+      document.getElementById('careerForm').reset();
+    }
+  </script>
+
+</body>
+
+</html>
