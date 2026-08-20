@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog & Insights | CELVION Sustainable Materials & Plant Fibre Innovation</title>
+  <meta name="description"
+    content="Read expert articles on sustainable material science, PFAS-free barrier technology, FSC certified molded pulp packaging, circular economy strategies, and global food contact compliance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --ink: #121517;
+      --charcoal: #1C2225;
+      --graphite: #3A4440;
+      --teal: #005A46;
+      --teal-light: #008064;
+      --teal-soft: #E6F2ED;
+      --gold: #C5A059;
+      --sand: #F8F8F5;
+      --sand-dark: #EFEFEA;
+      --line: #E2E2DC;
+      --white: #FFFFFF;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--sand);
+      color: var(--charcoal);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .wrap {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* NAVIGATION */
+    .site-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(248, 248, 245, 0.92);
+      backdrop-filter: blur(12px);
+      padding: 18px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      transition: all 0.3s ease;
+    }
+
+    .site-nav.is-scrolled {
+      padding: 14px 48px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-logo {
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--teal);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-logo span {
+      color: var(--gold);
+      font-size: 0.65em;
+      vertical-align: super;
+      margin-left: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--charcoal);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--teal);
+      font-weight: 600;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .nav-cta {
+      padding: 9px 20px;
+      border-radius: 40px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .nav-cta-primary {
+      background: var(--teal);
+      color: #fff;
+    }
+
+    .nav-cta-primary:hover {
+      background: var(--teal-light);
+      transform: translateY(-2px);
+    }
+
+    .nav-cta-secondary {
+      background: transparent;
+      color: var(--charcoal);
+      border: 1px solid var(--line);
+    }
+
+    .nav-cta-secondary:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+    }
+
+    .mobile-menu-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--charcoal);
+      margin: 5px 0;
+      transition: 0.3s;
+    }
+
+    /* MOBILE SIDEBAR */
+    .mobile-sidebar-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(18, 21, 23, 0.6);
+      z-index: 1001;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .mobile-sidebar-overlay.is-active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .mobile-sidebar {
+      position: fixed;
+      top: 0;
+      right: -320px;
+      width: 300px;
+      height: 100%;
+      background: var(--sand);
+      z-index: 1002;
+      padding: 24px;
+      box-shadow: -6px 0 30px rgba(0, 0, 0, 0.15);
+      transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .mobile-sidebar.is-active {
+      right: 0;
+    }
+
+    .mobile-sidebar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .mobile-sidebar-close {
+      background: none;
+      border: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: var(--charcoal);
+    }
+
+    .mobile-nav-links {
+      list-style: none;
+      margin-top: 20px;
+
+    }
+
+    .mobile-nav-links li {
+      margin-bottom: 16px;
+    }
+
+    .mobile-nav-links a {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--charcoal);
+      text-decoration: none;
+    }
+
+    .mobile-nav-links a.active {
+      color: var(--teal);
+    }
+
+    .mobile-sidebar-ctas {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .mobile-sidebar-ctas .full-width {
+      text-align: center;
+      width: 100%;
+    }
+
+    /* HEADER BANNER */
+    .page-header {
+      margin-top: 75px;
+      padding: 70px 0 40px;
+      background: linear-gradient(180deg, #EAEAE4 0%, var(--sand) 100%);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .page-header-head {
+      max-width: 840px;
+    }
+
+    .page-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 12px;
+    }
+
+    .page-header h1 {
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 800;
+      color: var(--teal);
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    .page-header h1 <em> {
+      font-style: normal;
+      color: var(--gold);
+    }
+
+    .page-header p {
+      font-size: 16px;
+      color: var(--graphite);
+      margin-top: 14px;
+      max-width: 720px;
+      line-height: 1.7;
+    }
+
+    /* FEATURED SPOTLIGHT BLOG ARTICLE */
+    .spotlight-section {
+      padding: 60px 0 40px;
+    }
+
+    .spotlight-card {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      background: #ffffff;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .spotlight-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0, 90, 70, 0.08);
+    }
+
+    .spotlight-img-wrap {
+      background: #004233;
+      min-height: 380px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .spotlight-img-bg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.88;
+      transition: transform 0.5s ease;
+    }
+
+    .spotlight-card:hover .spotlight-img-bg {
+      transform: scale(1.04);
+    }
+
+    .spotlight-badge {
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      background: var(--gold);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+
+    .spotlight-content {
+      padding: 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .blog-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+      color: #7A8882;
+      margin-bottom: 14px;
+    }
+
+    .blog-meta .dot-sep {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #B0BCB6;
+    }
+
+    .spotlight-title {
+      font-family: 'Manrope', sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--teal);
+      line-height: 1.35;
+      margin-bottom: 14px;
+    }
+
+    .spotlight-desc {
+      font-size: 15px;
+      color: var(--graphite);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .read-more-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--teal);
+      text-decoration: none;
+      transition: gap 0.3s ease, color 0.3s ease;
+    }
+
+    .read-more-link:hover {
+      gap: 12px;
+      color: var(--gold);
+    }
+
+    /* BLOG GRID SECTION */
+    .blog-grid-section {
+      padding: 40px 0 80px;
+    }
+
+    .section-title-wrap {
+      margin-bottom: 36px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .section-title-wrap h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--teal);
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .blog-card {
+      background: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 32px rgba(0, 90, 70, 0.07);
+    }
+
+    .blog-card-img-wrap {
+      height: 210px;
+      background: var(--teal-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .blog-card:hover .blog-card-img {
+      transform: scale(1.05);
+    }
+
+    .blog-category-tag {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: rgba(18, 21, 23, 0.75);
+      backdrop-filter: blur(6px);
+      color: #ffffff;
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 5px 12px;
+      border-radius: 16px;
+    }
+
+    .blog-card-body {
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .blog-card-title {
+      font-family: 'Manrope', sans-serif;
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--charcoal);
+      line-height: 1.4;
+      margin-bottom: 12px;
+      transition: color 0.3s ease;
+    }
+
+    .blog-card:hover .blog-card-title {
+      color: var(--teal);
+    }
+
+    .blog-card-excerpt {
+      font-size: 14px;
+      color: var(--graphite);
+      line-height: 1.65;
+      margin-bottom: 20px;
+      flex: 1;
+    }
+
+    .blog-card-footer {
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .author-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .author-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--teal);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .author-name {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--charcoal);
+    }
+
+    /* NEWSLETTER SUBSCRIBE BAR */
+    .newsletter-section {
+      background: var(--teal);
+      color: #ffffff;
+      padding: 60px 0;
+      border-radius: 24px;
+      margin-bottom: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .newsletter-inner {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .newsletter-text h3 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .newsletter-text p {
+      font-size: 14.5px;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 12px;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      padding: 14px 20px;
+      border-radius: 40px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .newsletter-form input::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .newsletter-form button {
+      padding: 14px 28px;
+      border-radius: 40px;
+      background: var(--gold);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 13.5px;
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.3s ease;
+    }
+
+    .newsletter-form button:hover {
+      background: #b5924b;
+    }
+
+    /* FOOTER */
+    footer,
+    .site-footer {
+      background: var(--ink);
+      color: rgba(248, 248, 245, 0.72);
+      padding: 50px 0 24px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 44px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid rgba(248, 248, 245, 0.12);
+    }
+
+    .footer-logo {
+      font-family: 'Manrope', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .footer-tagline {
+      font-size: 13px;
+      line-height: 1.65;
+      color: rgba(248, 248, 245, 0.55);
+      margin-top: 10px;
+    }
+
+    .footer-socials {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .footer-social-link {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .footer-social-link:hover {
+      background: var(--teal);
+      color: #ffffff;
+      border-color: var(--teal);
+      transform: translateY(-3px);
+    }
+
+    .footer-social-link svg {
+      width: 17px;
+      height: 17px;
+      fill: currentColor;
+    }
+
+    .footer-col h4 {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+
+    .footer-col a {
+      font-size: 14px;
+      color: rgba(248, 248, 245, 0.8);
+      text-decoration: none;
+    }
+
+    .footer-col a:hover {
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding-top: 24px;
+      font-size: 12px;
+      color: rgba(248, 248, 245, 0.4);
+    }
+
+    .footer-marks {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-marks span {
+      padding: 5px 12px;
+      border: 1px solid rgba(248, 248, 245, 0.18);
+      border-radius: 20px;
+    }
+
+    /* RESPONSIVE MEDIA QUERIES */
+    @media (max-width: 1024px) {
+      .spotlight-card {
+        grid-template-columns: 1fr;
+      }
+
+      .spotlight-img-wrap {
+        min-height: 260px;
+      }
+
+      .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .newsletter-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-menu-toggle {
+        display: block;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .spotlight-content {
+        padding: 24px;
+      }
+
+      .newsletter-form {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SITE NAVIGATION -->
+  <nav class="site-nav" id="siteNav">
+    <a href="index.html" class="nav-logo">CELVION<span>®</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="manufacturing.html">Manufacturing</a></li>
+      <li><a href="industries-careers.html">Industries &amp; Careers</a></li>
+      <li><a href="innovation-sustainability.html">Innovation &amp; Sustainability</a></li>
+      <li><a href="export.html">Export</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="contact.html" class="nav-cta nav-cta-primary">Get a Quote</a>
+      <a href="export.html" class="nav-cta nav-cta-secondary nav-login-desktop">Login</a>
+      <button type="button" class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE SIDEBAR OVERLAY & DRAWER -->
+  <div class="mobile-sidebar-overlay" id="mobileSidebarOverlay"></div>
+  <aside class="mobile-sidebar" id="mobileSidebar">
+    <div class="mobile-sidebar-header">
+      <a href="index.html" class="nav-logo">CELVION<span>®</span></a>
+      <button type="button" class="mobile-sidebar-close" id="mobileSidebarClose" aria-label="Close Menu">&times;</button>
+    </div>
+    <div class="mobile-sidebar-body">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="manufacturing.html">Manufacturing</a></li>
+        <li><a href="industries-careers.html">Industries &amp; Careers</a></li>
+        <li><a href="innovation-sustainability.html">Innovation &amp; Sustainability</a></li>
+        <li><a href="export.html">Export</a></li>
+        <li><a href="quality-resources.html">Quality &amp; Resources</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="mobile-sidebar-ctas">
+        <a href="contact.html" class="nav-cta nav-cta-primary full-width">Get a Quote</a>
+        <a href="export.html" class="nav-cta nav-cta-secondary full-width">Login</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- PAGE HEADER BANNER -->
+  <header class="page-header">
+    <div class="wrap">
+      <div class="page-header-head">
+        <span class="page-tag">CELVION INSIGHTS &amp; ARTICLES</span>
+        <h1>Pioneering <em>Sustainable Materials Science</em> &amp; Circular Innovation</h1>
+        <p>Explore expert technical analyses, regulatory compliance guides, LCA whitepapers, and manufacturing breakdowns straight from CELVION’s material engineering team.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- FEATURED SPOTLIGHT BLOG ARTICLE (ARTICLE 1) -->
+  <section class="spotlight-section">
+    <div class="wrap">
+      <div class="spotlight-card">
+        <div class="spotlight-img-wrap">
+          <img src="assets/banner/finaldraft06.png" alt="Rise of Plant Fibre Packaging" class="spotlight-img-bg">
+        </div>
+        <div class="spotlight-content">
+          <div class="blog-meta">
+            <span>Material Science &amp; Innovation</span>
+            <span class="dot-sep"></span>
+            <span>Aug 14, 2026</span>
+            <span class="dot-sep"></span>
+            <span>6 min read</span>
+          </div>
+          <h2 class="spotlight-title">The Rise of Plant Fibre: How Renewable Cellulose is Replacing Single-Use Plastics</h2>
+          <p class="spotlight-desc">An in-depth analysis of how agricultural byproduct fibres are engineered into high-barrier molded packaging with zero compromise on thermal or grease resistance.</p>
+          <div>
+            <a href="#blog-article-1" class="read-more-link">Read Full Article &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG GRID SECTION (ARTICLES 2 TO 6) -->
+  <section class="blog-grid-section">
+    <div class="wrap">
+      <div class="section-title-wrap">
+        <h2>Latest Industry Articles &amp; Insights</h2>
+      </div>
+
+      <div class="blog-grid">
+
+        <!-- Article 2 -->
+        <article class="blog-card">
+          <div class="blog-card-img-wrap">
+            <img src="assets/banner/finaldraft01.png" alt="Navigating Global PFAS Bans" class="blog-card-img">
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span>Aug 10, 2026</span>
+              <span class="dot-sep"></span>
+              <span>8 min read</span>
+            </div>
+            <h3 class="blog-card-title">Navigating Global PFAS Bans: What Foodservice Brands Need to Know for 2026</h3>
+            <p class="blog-card-excerpt">A practical guide to EU Single-Use Plastics directives and US state regulations banning fluorinated forever chemicals, and how plant-derived bio-coatings offer seamless compliance.</p>
+            <div class="blog-card-footer">
+              <a href="#blog-article-2" class="read-more-link">&rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="blog-card">
+          <div class="blog-card-img-wrap">
+            <img src="assets/banner/finaldraft02.png" alt="Life Cycle Assessment (LCA) Carbon Offset" class="blog-card-img">
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span>Aug 05, 2026</span>
+              <span class="dot-sep"></span>
+              <span>5 min read</span>
+            </div>
+            <h3 class="blog-card-title">Life Cycle Assessment (LCA): Quantifying the Real Carbon Offset of Fibre Packaging</h3>
+            <p class="blog-card-excerpt">Comparing total cradle-to-grave carbon emissions, water consumption, and land renewability of molded pulp packaging versus conventional EPS foam and PET containers.</p>
+            <div class="blog-card-footer">
+              <a href="#blog-article-3" class="read-more-link">&rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 4 -->
+        <article class="blog-card">
+          <div class="blog-card-img-wrap">
+            <img src="assets/banner/finaldraft04.png" alt="Designing Custom Moulded Fibre Tooling" class="blog-card-img">
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span>Jul 28, 2026</span>
+              <span class="dot-sep"></span>
+              <span>7 min read</span>
+            </div>
+            <h3 class="blog-card-title">Designing Custom Moulded Fibre: From 3D CAD Tooling to Mass Production</h3>
+            <p class="blog-card-excerpt">Step-by-step breakdown of how CELVION engineers custom OEM packaging, embossed branding, and precision edge-trimming for international enterprise buyers.</p>
+            <div class="blog-card-footer">
+              <a href="#blog-article-4" class="read-more-link">&rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 5 -->
+        <article class="blog-card">
+          <div class="blog-card-img-wrap">
+            <img src="assets/banner/finaldraft05.png" alt="Bio-Barrier Technology Innovations" class="blog-card-img">
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span>Jul 20, 2026</span>
+              <span class="dot-sep"></span>
+              <span>6 min read</span>
+            </div>
+            <h3 class="blog-card-title">Next-Gen Bio-Barrier Technology: Achieving High Oil &amp; Water Resistance Naturally</h3>
+            <p class="blog-card-excerpt">Exploring advanced plant-based micro-cellulose coatings engineered for extreme heat endurance, grease repellency, and zero synthetic polymers.</p>
+            <div class="blog-card-footer">
+              <a href="#blog-article-5" class="read-more-link">&rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 6 -->
+        <article class="blog-card">
+          <div class="blog-card-img-wrap">
+            <img src="assets/banner/finaldraft07.png" alt="Global Packaging Logistics" class="blog-card-img">
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span>Jul 12, 2026</span>
+              <span class="dot-sep"></span>
+              <span>5 min read</span>
+            </div>
+            <h3 class="blog-card-title">Export Logistics &amp; Supply Chain Resilience in Global Renewable Packaging</h3>
+            <p class="blog-card-excerpt">How multi-port container freight optimization, moisture-proof palletization, and strategic warehousing ensure uninterrupted supply to 15+ countries.</p>
+            <div class="blog-card-footer">
+              <a href="#blog-article-6" class="read-more-link">&rarr;</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER SUBSCRIBE BAR -->
+  <div class="wrap">
+    <section class="newsletter-section">
+      <div class="wrap">
+        <div class="newsletter-inner">
+          <div class="newsletter-text">
+            <h3>Subscribe to Material Science &amp; Industry Insights</h3>
+            <p>Get quarterly updates on global packaging compliance, new bio-barrier technologies, and CELVION whitepapers.</p>
+          </div>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to CELVION Insights!');">
+            <input type="email" placeholder="Enter your business email" required>
+            <button type="submit">Subscribe Now</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- SITE FOOTER -->
+  <footer id="contact" class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="footer-logo" style="text-decoration:none; display:inline-block; font-family:'Manrope',sans-serif; font-size:24px; font-weight:800; color:#ffffff; margin-bottom:14px; letter-spacing:-0.02em;">CELVION<span style="color:var(--gold); font-size:0.6em; vertical-align:super; margin-left:2px;">®</span></a>
+          <p class="footer-tagline">Inspired by Nature. Defined by Innovation. A premium global sustainable materials company engineering renewable alternatives to conventional packaging.</p>
+          <div class="footer-socials">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" class="footer-social-link">
+              <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" class="footer-social-link">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" class="footer-social-link">
+              <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="X (Twitter)" class="footer-social-link">
+              <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube" class="footer-social-link">
+              <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="manufacturing.html">Manufacturing</a></li>
+            <li><a href="industries-careers.html">Industries &amp; Careers</a></li>
+            <li><a href="quality-resources.html">Quality &amp; Resources</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="innovation-sustainability.html">Innovation &amp; Sustainability</a></li>
+            <li><a href="export.html">Export</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html#rfq">Request a Quote</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Corporate Office</h4>
+          <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 14px;">
+            <div style="display: flex; align-items: flex-start; gap: 10px; color: rgba(255,255,255,0.75); font-size: 14px; line-height: 1.6;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>1313–1314, 13th Floor, Fortune Business Hub,<br>Nr. Shell Petrol Pump, Science City Road,<br>Sola, Ahmedabad – 380060, Gujarat, India</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.75); font-size: 14px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <a href="tel:+917990441625" style="color: inherit; text-decoration: none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">+91 7990441625</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.75); font-size: 14px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <a href="mailto:sales@sngecoindia.com" style="color: inherit; text-decoration: none;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">sales@sngecoindia.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 SNG Eco India Pvt Ltd. All rights reserved.</span>
+        <div class="footer-marks">
+          <span>Engineering Excellence</span>
+          <span>Global Quality Standards</span>
+          <span>Renewable Materials</span>
+          <span>Export Ready</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    const nav = document.getElementById('siteNav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) nav.classList.add('is-scrolled');
+      else nav.classList.remove('is-scrolled');
+    }, { passive: true });
+
+    // Mobile Sidebar Drawer Handlers
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileSidebar = document.getElementById('mobileSidebar');
+    const mobileSidebarOverlay = document.getElementById('mobileSidebarOverlay');
+    const mobileSidebarClose = document.getElementById('mobileSidebarClose');
+
+    function openMobileSidebar() {
+      if (mobileSidebar && mobileSidebarOverlay) {
+        mobileSidebar.classList.add('is-active');
+        mobileSidebarOverlay.classList.add('is-active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeMobileSidebar() {
+      if (mobileSidebar && mobileSidebarOverlay) {
+        mobileSidebar.classList.remove('is-active');
+        mobileSidebarOverlay.classList.remove('is-active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMobileSidebar);
+    if (mobileSidebarClose) mobileSidebarClose.addEventListener('click', closeMobileSidebar);
+    if (mobileSidebarOverlay) mobileSidebarOverlay.addEventListener('click', closeMobileSidebar);
+  </script>
+
+</body>
+
+</html>
