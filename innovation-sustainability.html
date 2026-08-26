@@ -1,0 +1,2385 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Innovation &amp; Sustainability &mdash; CELVION | Inspired by Nature. Defined by Innovation.</title>
+  <meta name="description"
+    content="Discover CELVION bio-material breakthroughs, R&amp;D platforms, compounding flywheel, circular LCA, and zero-greenwashing sustainability commitments.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --teal: #005A46;
+      --teal-deep: #00402F;
+      --teal-tint: #E4EEEC;
+      --gold: #B37A42;
+      --gold-deep: #8C5F30;
+      --gold-tint: #F3E6D8;
+      --ink: #2F3437;
+      --cream: #F8F8F5;
+      --sand: #ECE7DF;
+      --charcoal: #2F3437;
+      --graphite: #5C6469;
+      --line: rgba(47, 52, 55, 0.14);
+      --card-shadow: 0 12px 32px -8px rgba(0, 90, 70, 0.08);
+      --card-hover-shadow: 0 20px 40px -12px rgba(0, 90, 70, 0.16);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--charcoal);
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    ::selection {
+      background: var(--teal);
+      color: var(--cream);
+    }
+
+    .wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 56px;
+    }
+
+    section {
+      position: relative;
+    }
+
+    .section-pad {
+      padding: 100px 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: Arial, sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--charcoal);
+    }
+
+    em {
+      font-style: normal;
+      font-weight: 700;
+      color: var(--teal);
+    }
+
+    /* MANDATORY UNIFIED SECTION TITLE TYPOGRAPHY */
+    .section-title,
+    .section-title em,
+    .page-header h1,
+    .page-header h1 em,
+    .unified-title,
+    .unified-title em {
+      font-family: Arial, sans-serif !important;
+      font-weight: 700 !important;
+      font-size: clamp(26px, 3.6vw, 45px) !important;
+      line-height: 1.14 !important;
+      color: #005A46 !important;
+      letter-spacing: -0.01em;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--teal-deep);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .eyebrow::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    .section-head {
+      max-width: 1100px;
+      margin-bottom: 56px;
+    }
+
+    .single-line-title {
+      white-space: nowrap;
+    }
+
+    @media (max-width: 1100px) {
+      .single-line-title {
+        white-space: normal;
+      }
+    }
+
+    .section-desc {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--graphite);
+      margin-top: 16px;
+      max-width: 850px;
+    }
+
+    .bg-tint {
+      background: var(--teal-tint);
+    }
+
+    .bg-sand {
+      background: var(--sand);
+    }
+
+    .bg-dark {
+      background: var(--teal-deep);
+      color: #fff;
+    }
+
+    .bg-dark p {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 15px 30px;
+      border-radius: 40px;
+      transition: transform .25s ease, background .3s ease, color .3s ease, box-shadow .3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-solid {
+      background: #5d7470;
+      color: #fff;
+      box-shadow: 0 10px 24px -10px rgba(93, 116, 112, 0.55);
+    }
+
+    .btn-solid:hover {
+      background: #4a5d59;
+      transform: translateY(-2px);
+    }
+
+    .btn-gold {
+      background: #5d7470;
+      color: #fff;
+      box-shadow: 0 10px 24px -10px rgba(93, 116, 112, .45);
+      transition: all .3s ease;
+    }
+
+    .btn-gold:hover {
+      background: #4a5d59;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--charcoal);
+      border: 1.5px solid var(--charcoal);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--teal);
+      color: var(--teal-deep);
+      transform: translateY(-2px);
+    }
+
+    /* reveal-on-scroll */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .8s cubic-bezier(.22, .61, .36, 1), transform .8s cubic-bezier(.22, .61, .36, 1);
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .stagger .reveal:nth-child(1) {
+      transition-delay: .02s;
+    }
+
+    .stagger .reveal:nth-child(2) {
+      transition-delay: .07s;
+    }
+
+    .stagger .reveal:nth-child(3) {
+      transition-delay: .12s;
+    }
+
+    .stagger .reveal:nth-child(4) {
+      transition-delay: .17s;
+    }
+
+    .stagger .reveal:nth-child(5) {
+      transition-delay: .22s;
+    }
+
+    .stagger .reveal:nth-child(6) {
+      transition-delay: .27s;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
+
+    /* SITE NAV */
+    .site-nav {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+      z-index: 99999 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding: 16px 48px;
+      background: #F8F8F5 !important;
+      backdrop-filter: blur(10px) !important;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08) !important;
+      transition: padding .3s ease, background .3s ease !important;
+    }
+
+    .site-nav.is-scrolled {
+      padding: 12px 48px !important;
+      background: #F8F8F5 !important;
+      box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .nav-logo,
+    .nav-logo:visited,
+    .nav-logo:hover {
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px;
+      font-family: Arial, sans-serif !important;
+      font-size: 22px !important;
+      font-weight: 800 !important;
+      letter-spacing: 0.02em !important;
+      color: #005A46 !important;
+      text-decoration: none !important;
+      white-space: nowrap !important;
+      flex-shrink: 0 !important;
+    }
+
+    .nav-logo span {
+      color: var(--gold);
+      font-size: 14px;
+      vertical-align: super;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--charcoal);
+      text-decoration: none;
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      transition: width .3s ease;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .nav-links a.active {
+      color: var(--teal-deep);
+      font-weight: 700;
+    }
+
+    .nav-right {
+      display: flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+      flex-shrink: 0 !important;
+    }
+
+    .nav-cta,
+    .nav-cta-primary,
+    .nav-cta-secondary {
+      font-size: 12px !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.04em !important;
+      text-transform: uppercase !important;
+      text-decoration: none !important;
+      padding: 9px 20px !important;
+      border-radius: 30px !important;
+      transition: all 0.3s ease !important;
+      white-space: nowrap !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      background: #5d7470 !important;
+      color: #ffffff !important;
+      border: 1px solid #5d7470 !important;
+      box-shadow: 0 2px 8px rgba(0, 90, 70, 0.2) !important;
+    }
+
+    .nav-cta:hover,
+    .nav-cta-primary:hover,
+    .nav-cta-secondary:hover {
+      background: #004334 !important;
+      border-color: #004334 !important;
+      color: #ffffff !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 4px 14px rgba(0, 90, 70, 0.35) !important;
+    }
+
+    /* ===================================================== MOBILE MENU & SIDEBAR ===================================================== */
+    .mobile-menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 28px;
+      height: 20px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 100001;
+      margin-left: 6px;
+    }
+
+    .mobile-menu-toggle span {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: #005A46;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+
+    .mobile-sidebar-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(4px);
+      z-index: 999998;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .mobile-sidebar-overlay.is-active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-sidebar {
+      position: fixed;
+      top: 0;
+      right: -320px;
+      width: 290px;
+      max-width: 85vw;
+      height: 100vh;
+      background: #FFFFFF;
+      z-index: 999999;
+      box-shadow: -4px 0 25px rgba(0, 0, 0, 0.15);
+      display: flex;
+      flex-direction: column;
+      transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow-y: auto;
+    }
+
+    .mobile-sidebar.is-active {
+      right: 0;
+    }
+
+    .mobile-sidebar-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 20px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      background: #F8F8F5;
+    }
+
+    .mobile-sidebar-close {
+      background: transparent;
+      border: none;
+      font-size: 28px;
+      color: #005A46;
+      cursor: pointer;
+      line-height: 1;
+      padding: 0 4px;
+    }
+
+    .mobile-sidebar-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      flex: 1;
+    }
+
+    .mobile-nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .mobile-nav-links a {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #2B3033;
+      text-decoration: none;
+      display: block;
+      padding: 10px 14px;
+      border-radius: 8px;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .mobile-nav-links a:hover,
+    .mobile-nav-links a.active {
+      background: #E4EEEC;
+      color: #005A46;
+      font-weight: 700;
+    }
+
+    .mobile-sidebar-ctas {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: auto;
+      padding-top: 16px;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .mobile-sidebar-ctas .full-width {
+      width: 100%;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    /* LANGUAGE SELECTOR STYLING */
+    .lang-selector-wrapper {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .lang-selector-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #ffffff;
+      color: #005A46;
+      border: 1.5px solid #005A46;
+      padding: 7px 14px;
+      border-radius: 30px;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 90, 70, 0.12);
+      transition: all 0.25s ease;
+    }
+
+    .lang-selector-btn:hover,
+    .lang-selector-wrapper.active .lang-selector-btn {
+      background: #005A46;
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(0, 90, 70, 0.3);
+    }
+
+    .lang-selector-btn .chevron-icon {
+      transition: transform 0.25s ease;
+    }
+
+    .lang-selector-wrapper.active .chevron-icon {
+      transform: rotate(180deg);
+    }
+
+    .lang-dropdown-menu {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      width: 175px;
+      background: #ffffff;
+      border: 1px solid rgba(0, 90, 70, 0.18);
+      border-radius: 14px;
+      box-shadow: 0 12px 32px rgba(0, 40, 30, 0.15);
+      list-style: none;
+      padding: 6px;
+      margin: 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-8px);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 100000;
+    }
+
+    .lang-selector-wrapper.active .lang-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .lang-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      color: #2F3437;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .lang-option:hover,
+    .lang-option.active {
+      background: #E4EEEC;
+      color: #005A46;
+    }
+
+    .mobile-lang-selector {
+      width: 100%;
+      margin-top: 4px;
+    }
+
+    .mobile-lang-select {
+      width: 100%;
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1.5px solid rgba(0, 90, 70, 0.2);
+      background: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      color: #005A46;
+      outline: none;
+    }
+
+    @media (max-width: 980px) {
+      .nav-links {
+        display: none !important;
+      }
+
+      .mobile-menu-toggle {
+        display: flex !important;
+      }
+
+      .nav-login-desktop {
+        display: none !important;
+      }
+
+      .site-nav {
+        padding: 12px 20px !important;
+      }
+
+      .site-nav.is-scrolled {
+        padding: 10px 20px !important;
+      }
+
+      .nav-logo {
+        font-size: 19px !important;
+      }
+
+      .nav-right {
+        gap: 8px !important;
+      }
+
+      .nav-cta,
+      .nav-cta-primary,
+      .nav-cta-secondary {
+        padding: 7px 14px !important;
+        font-size: 11px !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .site-nav {
+        padding: 10px 14px !important;
+      }
+
+      .nav-logo {
+        font-size: 17px !important;
+      }
+
+      .nav-right {
+        gap: 6px !important;
+      }
+
+      .nav-cta,
+      .nav-cta-primary,
+      .nav-cta-secondary {
+        padding: 6px 12px !important;
+        font-size: 10px !important;
+      }
+    }
+
+    /* PAGE HEADER HERO */
+    .page-header {
+      width: 100%;
+      margin-top: 68px;
+      padding: 0;
+      min-height: auto;
+      position: relative;
+      overflow: hidden;
+      background: transparent;
+    }
+
+    .page-header-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .page-header {
+        margin-top: 70px;
+        padding: 0;
+        min-height: auto;
+      }
+    }
+
+    .page-header .wrap {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 56px;
+      position: relative;
+      z-index: 2;
+      text-align: left;
+    }
+
+    .page-header h1 {
+      max-width: 850px;
+      text-align: left;
+    }
+
+    @media (max-width: 768px) {
+      .page-header h1 span {
+        white-space: normal !important;
+      }
+    }
+
+    .page-header .eyebrow {
+      justify-content: center;
+    }
+
+    .page-header p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--graphite);
+      max-width: 66ch;
+      margin: 22px auto 0;
+    }
+
+    .header-marks {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 36px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header-marks span {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--teal-deep);
+      background: #fff;
+      border: 1px solid var(--line);
+      padding: 10px 22px;
+      border-radius: 30px;
+      box-shadow: 0 4px 14px rgba(0, 90, 70, 0.05);
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .header-marks span:hover {
+      border-color: var(--teal);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0, 90, 70, 0.1);
+    }
+
+    /* BIO-BREAKTHROUGHS GRID */
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+    }
+
+    .tech-header,
+    .platform-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .tech-header .tech-card-icon,
+    .platform-header .platform-card-icon {
+      margin-bottom: 0;
+      flex-shrink: 0;
+    }
+
+    .tech-header h3,
+    .platform-header h3 {
+      margin-bottom: 0;
+      font-size: 19px;
+      line-height: 1.3;
+    }
+
+    .tech-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 36px 30px;
+      border: 1px solid var(--line);
+      box-shadow: var(--card-shadow);
+      transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .tech-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--card-hover-shadow);
+      border-color: var(--teal);
+    }
+
+    .tech-card-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: var(--teal-tint);
+      color: var(--teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      transition: all 0.3s ease;
+    }
+
+    .tech-card:hover .tech-card-icon {
+      background: var(--teal);
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    .tech-card h3 {
+      font-size: 20px;
+      line-height: 1.3;
+      margin-bottom: 12px;
+      color: var(--charcoal);
+    }
+
+    .tech-card p {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: var(--graphite);
+    }
+
+    /* R&D PLATFORMS GRID */
+    .platform-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 36px 30px;
+      border: 1px solid var(--line);
+      box-shadow: var(--card-shadow);
+      transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .platform-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--card-hover-shadow);
+      border-color: var(--teal);
+    }
+
+    .platform-card-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: var(--teal-tint);
+      color: var(--teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      transition: all 0.3s ease;
+    }
+
+    .platform-card:hover .platform-card-icon {
+      background: var(--teal);
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    .platform-card h3 {
+      font-size: 21px;
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+
+    .platform-card p {
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--graphite);
+    }
+
+    /* FLYWHEEL SECTION */
+    .flywheel-container {
+      background: #fff;
+      border-radius: 24px;
+      padding: 56px 40px;
+      border: 1px solid var(--line);
+      box-shadow: var(--card-shadow);
+      margin-top: 48px;
+      text-align: center;
+    }
+
+    .flywheel-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 40px;
+      position: relative;
+    }
+
+    .flywheel-node {
+      background: var(--cream);
+      border: 1.5px solid var(--line);
+      border-radius: 16px;
+      padding: 22px 18px;
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .flywheel-node:hover {
+      background: #fff;
+      border-color: var(--teal);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(0, 90, 70, 0.1);
+    }
+
+    .flywheel-node-num {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      color: var(--gold-deep);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .flywheel-node-title {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--teal-deep);
+    }
+
+    .flywheel-arrow-line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 28px 0;
+      gap: 12px;
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* SUSTAINABILITY ARCHITECTURE */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .impact-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 36px 28px;
+      border: 1px solid var(--line);
+      box-shadow: var(--card-shadow);
+      transition: all 0.35s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .impact-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--card-hover-shadow);
+      border-color: var(--teal);
+    }
+
+    .impact-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .impact-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: var(--teal-tint);
+      color: var(--teal-deep);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+    }
+
+    .impact-card:hover .impact-icon {
+      background: var(--teal);
+      color: #fff;
+    }
+
+    .impact-card h3 {
+      font-size: 18.5px;
+      line-height: 1.3;
+      margin-bottom: 0;
+      color: var(--teal-deep);
+    }
+
+    .impact-card p {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: var(--graphite);
+    }
+
+    /* CIRCULAR LCA STAGES */
+    .lca-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .lca-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 34px 28px;
+      border: 1.5px solid var(--line);
+      box-shadow: var(--card-shadow);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+
+    .lca-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--teal);
+      box-shadow: var(--card-hover-shadow);
+    }
+
+    .lca-step-badge {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      color: var(--gold-deep);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .lca-card h3 {
+      font-size: 19px;
+      line-height: 1.3;
+      margin-bottom: 10px;
+      color: var(--charcoal);
+    }
+
+    .lca-card p {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: var(--graphite);
+    }
+
+    /* MANIFESTO BOX - COMPACT REDESIGN */
+    .manifesto-box {
+      background: #fff;
+      color: var(--charcoal);
+      border-radius: 20px;
+      padding: 30px 36px;
+      border: 1px solid rgba(47, 52, 55, 0.08);
+      border-left: 6px solid var(--teal);
+      margin-top: 40px;
+      box-shadow: var(--card-shadow);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .manifesto-box:hover {
+      transform: translateY(-4px);
+      border-left-color: var(--gold);
+      border-color: rgba(0, 90, 70, 0.2);
+      box-shadow: var(--card-hover-shadow);
+    }
+
+    .manifesto-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--teal-deep);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 12px;
+    }
+
+    .manifesto-tag::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+      display: inline-block;
+      transition: transform 0.35s ease, background 0.35s ease;
+    }
+
+    .manifesto-box:hover .manifesto-tag::before {
+      transform: scale(1.3);
+      background: var(--teal);
+    }
+
+    .manifesto-split-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 40px;
+      align-items: center;
+      margin-top: 0;
+    }
+
+    .manifesto-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .manifesto-lead-title {
+      font-family: Arial, sans-serif;
+      font-size: clamp(20px, 2vw, 26px);
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--charcoal);
+      margin-bottom: 10px;
+    }
+
+    .manifesto-lead-title em {
+      color: var(--teal);
+      font-style: normal;
+    }
+
+    .manifesto-lead-sub {
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--graphite);
+    }
+
+    .manifesto-right-pillars {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .manifesto-pillar-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--cream);
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(47, 52, 55, 0.08);
+      transition: all 0.3s ease;
+    }
+
+    .manifesto-pillar-card:hover {
+      background: #ffffff;
+      border-color: var(--teal);
+      box-shadow: 0 6px 16px rgba(0, 90, 70, 0.06);
+      transform: translateX(4px);
+    }
+
+    .manifesto-pillar-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: var(--teal-tint);
+      color: var(--teal-deep);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .manifesto-pillar-icon svg {
+      width: 17px;
+      height: 17px;
+    }
+
+    .manifesto-pillar-card h4 {
+      font-family: Arial, sans-serif;
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 2px;
+    }
+
+    .manifesto-pillar-card p {
+      font-size: 12.5px;
+      line-height: 1.45;
+      color: var(--graphite);
+      margin: 0;
+    }
+
+    @media (max-width: 992px) {
+      .manifesto-split-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    /* CTA BOX */
+    .cta-banner {
+      background: #ffffff;
+      color: var(--charcoal);
+      border-radius: 20px;
+      padding: 38px 32px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: 0 12px 32px -8px rgba(0, 90, 70, 0.06);
+    }
+
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--teal) 0%, var(--gold) 100%);
+    }
+
+    .cta-banner h2,
+    .cta-banner h2 em {
+      color: #005A46 !important;
+      font-size: clamp(22px, 2.4vw, 32px) !important;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-banner p {
+      color: var(--graphite);
+      font-size: 15px;
+      max-width: 56ch;
+      margin: 0 auto 22px;
+      line-height: 1.6;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background: #2F3437;
+      color: #fff;
+      padding: 60px 0 28px;
+      font-size: 14px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 48px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand p {
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 16px;
+      line-height: 1.7;
+      max-width: 34ch;
+    }
+
+    .footer-socials {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .footer-social-link {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .footer-social-link:hover {
+      background: var(--teal, #005A46);
+      color: #ffffff;
+      border-color: var(--teal, #005A46);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0, 90, 70, 0.3);
+    }
+
+    .footer-social-link svg {
+      width: 17px;
+      height: 17px;
+      fill: currentColor;
+    }
+
+    .footer-col h4 {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-col a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: color .2s ease;
+    }
+
+    .footer-col a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 13px;
+    }
+
+    .footer-marks {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-marks span {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.7);
+      background: rgba(255, 255, 255, 0.06);
+      padding: 4px 12px;
+      border-radius: 12px;
+    }
+
+    @media (max-width:1100px) {
+
+      .grid-4,
+      .lca-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .flywheel-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width:980px) {
+      .wrap {
+        padding: 0 24px;
+      }
+
+      .section-pad {
+        padding: 70px 0;
+      }
+
+      .page-header {
+        padding: 140px 24px 60px;
+      }
+
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .manifesto-box {
+        padding: 36px 28px;
+      }
+    }
+
+    @media (max-width:600px) {
+
+      .grid-4,
+      .lca-grid,
+      .flywheel-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-banner {
+        padding: 40px 24px;
+      }
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 90;
+      background: #25D366;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 10px 24px rgba(37, 211, 102, 0.4);
+      transition: transform .25s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.05);
+    }
+
+    .whatsapp-float svg {
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+    }
+
+    /* ===================================================== FLOATING CATALOGUE ===================================================== */
+    .catalogue-float {
+      position: fixed;
+      left: 26px;
+      bottom: 48px;
+      z-index: 90;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #5d7470;
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 20px;
+      border-radius: 30px;
+      box-shadow: 0 16px 30px -12px rgba(0, 90, 70, 0.55);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      transition: all 0.3s ease;
+      animation: floatBob 3.2s ease-in-out infinite 0.4s;
+    }
+
+    .catalogue-float:hover {
+      background: #4a5d59;
+      transform: translateY(-3px);
+      color: #fff;
+      box-shadow: 0 20px 35px -10px rgba(184, 134, 11, 0.6);
+    }
+
+    @media (max-width:560px) {
+      .catalogue-float span {
+        display: none;
+      }
+
+      .catalogue-float {
+        padding: 14px;
+        left: 16px;
+        bottom: 20px;
+      }
+    }
+
+    /* ===================================================== RESPONSIVE MOBILE & TABLET ENHANCEMENTS ===================================================== */
+    html,
+    body {
+      max-width: 100% !important;
+      overflow-x: hidden !important;
+    }
+
+    h1,
+    h2,
+    h3,
+    .page-header h1,
+    .section-title {
+      word-wrap: break-word !important;
+      overflow-wrap: break-word !important;
+    }
+
+    @media (max-width: 640px) {
+      .site-nav {
+        padding: 12px 14px !important;
+      }
+
+      .site-nav.is-scrolled {
+        padding: 10px 14px !important;
+      }
+
+      .nav-logo {
+        font-size: 18px !important;
+      }
+
+      .nav-right {
+        gap: 6px !important;
+      }
+
+      .nav-cta {
+        padding: 7px 12px !important;
+        font-size: 10.5px !important;
+      }
+
+      .wrap {
+        padding: 0 16px !important;
+      }
+    }
+
+    /* ================= FAQ HOME PAGE STRUCTURE & STYLING ================= */
+    .faq-list {
+      max-width: 900px;
+    }
+
+    details.faq-item {
+      border-top: 1px solid rgba(47, 52, 55, 0.15);
+      padding: 24px 0;
+    }
+
+    .faq-list details.faq-item:last-child {
+      border-bottom: 1px solid rgba(47, 52, 55, 0.15);
+    }
+
+    details.faq-item summary {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #2F3437;
+      gap: 20px;
+      transition: color 0.2s ease;
+    }
+
+    details.faq-item summary:hover {
+      color: #005A46;
+    }
+
+    details.faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details.faq-item summary::after {
+      content: '+';
+      font-family: 'Inter', sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: #ffffff;
+      background: #005A46;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    details.faq-item[open] summary::after {
+      transform: rotate(45deg);
+      background: rgba(5, 82, 61, 0.55);
+      color: #ffffff;
+    }
+
+    details.faq-item p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #4A5950;
+      max-width: 62ch;
+      margin-top: 14px;
+      padding-right: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SITE NAV -->
+  <nav class="site-nav" id="siteNav">
+    <a href="index.html" class="nav-logo">CELVION<span>&reg;</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="manufacturing.html">Manufacturing</a></li>
+      <li><a href="industries-careers.html">Industries We Serve</a></li>
+      <li><a href="innovation-sustainability.html" class="active">Innovation &amp; Sustainability</a></li>
+      <li><a href="export.html">Export</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="contact.html" class="nav-cta nav-cta-primary">Get a Quote</a>
+
+      <!-- LANGUAGE SELECTOR DROPDOWN -->
+      <div class="lang-selector-wrapper" id="langSelector">
+        <button type="button" class="lang-selector-btn" id="langSelectorBtn" aria-expanded="false"
+          aria-label="Select Language">
+          <svg class="globe-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span class="current-lang-text">EN</span>
+          <svg class="chevron-icon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.5">
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </button>
+        <ul class="lang-dropdown-menu" id="langDropdownMenu">
+          <li><a href="javascript:void(0)" class="lang-option active" data-lang="en"
+              onclick="setLanguage('en','English')">ðŸ‡ºðŸ‡¸ English (EN)</a></li>
+          <li><a href="javascript:void(0)" class="lang-option" data-lang="es" onclick="setLanguage('es','EspaÃ±ol')">ðŸ‡ªðŸ‡¸
+              EspaÃ±ol (ES)</a></li>
+          <li><a href="javascript:void(0)" class="lang-option" data-lang="fr"
+              onclick="setLanguage('fr','FranÃ§ais')">ðŸ‡«ðŸ‡· FranÃ§ais (FR)</a></li>
+          <li><a href="javascript:void(0)" class="lang-option" data-lang="de" onclick="setLanguage('de','Deutsch')">ðŸ‡©ðŸ‡ª
+              Deutsch (DE)</a></li>
+          <li><a href="javascript:void(0)" class="lang-option" data-lang="hi" onclick="setLanguage('hi','à¤¹à¤¿à¤¨à¥à¤¦à¥€')">ðŸ‡®ðŸ‡³
+              à¤¹à¤¿à¤¨à¥à¤¦à¥€ (HI)</a></li>
+          <li><a href="javascript:void(0)" class="lang-option" data-lang="ar" onclick="setLanguage('ar','Ø§Ù„Ø¹Ø±Ø¨ÙŠØ©')">ðŸ‡¦ðŸ‡ª
+              Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© (AR)</a></li>
+        </ul>
+      </div>
+
+      <button type="button" class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE SIDEBAR OVERLAY & DRAWER -->
+  <div class="mobile-sidebar-overlay" id="mobileSidebarOverlay"></div>
+  <aside class="mobile-sidebar" id="mobileSidebar">
+    <div class="mobile-sidebar-header">
+      <a href="index.html" class="nav-logo">CELVION<span>&reg;</span></a>
+      <button type="button" class="mobile-sidebar-close" id="mobileSidebarClose"
+        aria-label="Close Menu">&times;</button>
+    </div>
+    <div class="mobile-sidebar-body">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="manufacturing.html">Manufacturing</a></li>
+        <li><a href="industries-careers.html">Industries We Serve</a></li>
+        <li><a href="innovation-sustainability.html" class="active">Innovation &amp; Sustainability</a></li>
+        <li><a href="export.html">Export</a></li>
+            <!-- <li><a href="quality-resources.html">Quality &amp; Resources</a></li> -->
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="mobile-sidebar-ctas">
+        <a href="contact.html" class="nav-cta nav-cta-primary full-width">Get a Quote</a>
+        <div class="mobile-lang-selector">
+          <label
+            style="display:flex; align-items:center; gap:6px; font-size:11px; font-weight:700; color:#005A46; margin-bottom:6px; text-transform:uppercase; letter-spacing:0.05em;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="2" y1="12" x2="22" y2="12" />
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
+            Select Language
+          </label>
+          <select class="mobile-lang-select" onchange="setLanguage(this.value, this.options[this.selectedIndex].text)">
+            <option value="en" selected>ðŸ‡ºðŸ‡¸ English (EN)</option>
+            <option value="es">ðŸ‡ªðŸ‡¸ EspaÃ±ol (ES)</option>
+            <option value="fr">ðŸ‡«ðŸ‡· FranÃ§ais (FR)</option>
+            <option value="de">ðŸ‡©ðŸ‡ª Deutsch (DE)</option>
+            <option value="hi">ðŸ‡®ðŸ‡³ à¤¹à¤¿à¤¨à¥à¤¦à¥€ (HI)</option>
+            <option value="ar">ðŸ‡¦ðŸ‡ª Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© (AR)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- PAGE HEADER HERO -->
+  <header class="page-header">
+    <img src="assets/banner/From Sugarcane Bagasse. Towards a Sustainable Future..png" alt="Celvion Innovation & Sustainability Banner" class="page-header-img">
+  </header>
+
+  <!-- SECTION 1: NEXT-GEN BIO-MATERIAL BREAKTHROUGHS -->
+  <section class="section-pad" style="background-color: #e4eeec;">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="section-title single-line-title">Bagasse Tableware: Strength Meets Sustainability</h2>
+        <p class="section-desc">CELVION applies precision material science to transform sugarcane bagasse &mdash; the fibrous
+          residue of sugarcane processing &mdash; into high-performance, fully compostable food-service and packaging
+          solutions. No virgin wood pulp. No synthetic plastics. No compromise on performance.</p>
+      </div>
+
+      <div class="grid-4 stagger">
+        <!-- Tech 01 -->
+        <div class="tech-card reveal">
+          <div>
+            <div class="tech-header">
+              <div class="tech-card-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.4 19 2c1 2 2 4.18 2 8 0 5.5-4.7 10-10 10Z" />
+                  <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+                </svg>
+              </div>
+              <h3>Natural Fibre Strength</h3>
+            </div>
+            <p>Bagasse fibres refined into high-strength, rigid structures &mdash; no virgin pulp, no plastic additives.</p>
+          </div>
+        </div>
+
+        <!-- Tech 02 -->
+        <div class="tech-card reveal">
+          <div>
+            <div class="tech-header">
+              <div class="tech-card-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+                </svg>
+              </div>
+              <h3>Oil &amp; Moisture Resistant</h3>
+            </div>
+            <p>Withstands hot liquids and cooking oils without PE or PLA linings.</p>
+          </div>
+        </div>
+
+        <!-- Tech 03 -->
+        <div class="tech-card reveal">
+          <div>
+            <div class="tech-header">
+              <div class="tech-card-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                </svg>
+              </div>
+              <h3>Heat &amp; Microwave Safe</h3>
+            </div>
+            <p>Handles hot liquids and food safely &mdash; suitable for hot food and microwave use.</p>
+          </div>
+        </div>
+
+        <!-- Tech 04 -->
+        <div class="tech-card reveal">
+          <div>
+            <div class="tech-header">
+              <div class="tech-card-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <polyline points="9 11 12 14 22 4" />
+                </svg>
+              </div>
+              <h3>Commercially Compostable</h3>
+            </div>
+            <p>Breaks down into organic matter &mdash; zero microplastics, zero toxic residues.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: R&D PLATFORMS & SECTION 3: FLYWHEEL (COMMENTED OUT & HIDDEN) -->
+  <!--
+  <section class="section-pad bg-sand" style="display: none !important;">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="section-title single-line-title">Global R&amp;D and Innovation Platforms</h2>
+        <p class="section-desc">Our innovation strategy is structured around four distinct platforms designed to advance
+          material performance, customer co-engineering, and industry leadership.</p>
+      </div>
+
+      <div class="grid-4 stagger">
+        <div class="platform-card reveal">
+          <div>
+            <div class="platform-header">
+              <div class="platform-card-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                </svg>
+              </div>
+              <h3>CELVION Lab</h3>
+            </div>
+            <p>Applied research focusing on next-generation cellulose composites, natural binder matrixes, and
+              food-grade moisture barrier science.</p>
+          </div>
+        </div>
+
+        <div class="platform-card reveal">
+          <div>
+            <div class="platform-header">
+              <div class="platform-card-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                  <polyline points="2 17 12 22 22 17" />
+                  <polyline points="2 12 12 17 22 12" />
+                </svg>
+              </div>
+              <h3>CELVION Innovation Centre</h3>
+            </div>
+            <p>Direct customer collaboration hub for rapid 3D CAD prototyping, custom mould creation, and bespoke
+              structural packaging validation.</p>
+          </div>
+        </div>
+
+        <div class="platform-card reveal">
+          <div>
+            <div class="platform-header">
+              <div class="platform-card-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                  <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                </svg>
+              </div>
+              <h3>CELVION Academy</h3>
+            </div>
+            <p>Educational framework providing technical knowledge-sharing, material science training, and packaging
+              sustainability workshops for enterprise clients.</p>
+          </div>
+        </div>
+
+        <div class="platform-card reveal">
+          <div>
+            <div class="platform-header">
+              <div class="platform-card-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                  <path d="M2 12h20" />
+                </svg>
+              </div>
+              <h3>CELVION Sustainability Council</h3>
+            </div>
+            <p>Internal leadership governing corporate ESG policies, raw material auditing, circular economy strategies,
+              and carbon reduction benchmarks.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad" style="display: none !important;">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="section-title">The CELVION Innovation Flywheel</h2>
+        <p class="section-desc">Rather than a linear model, CELVION operates on a compounding cycle where every
+          engineering breakthrough reinvests directly into future capabilities.</p>
+      </div>
+
+      <div class="flywheel-container reveal">
+        <div class="flywheel-grid stagger">
+          <div class="flywheel-node reveal">
+            <div class="flywheel-node-num">Step 01</div>
+            <div class="flywheel-node-title">Material Science Innovation</div>
+          </div>
+          <div class="flywheel-node reveal">
+            <div class="flywheel-node-num">Step 02</div>
+            <div class="flywheel-node-title">Better Products &amp; Performance</div>
+          </div>
+          <div class="flywheel-node reveal">
+            <div class="flywheel-node-num">Step 03</div>
+            <div class="flywheel-node-title">Superior Customer Experience</div>
+          </div>
+          <div class="flywheel-node reveal">
+            <div class="flywheel-node-num">Step 04</div>
+            <div class="flywheel-node-title">Enterprise Customer Trust</div>
+          </div>
+        </div>
+
+        <div class="flywheel-arrow-line reveal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+          </svg>
+          Continuous Reinvestment Cycle
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+          </svg>
+        </div>
+
+        <div class="flywheel-grid stagger">
+          <div class="flywheel-node reveal">
+            <div class="flywheel-node-num">Step 08</div>
+            <div class="flywheel-node-title">Expanded R&amp;D Investment</div>
+          </div>
+          <div class="flywheel-node reveal">
+            <div class="flywheel-node-num">Step 07</div>
+            <div class="flywheel-node-title">Higher Manufacturing Margins</div>
+          </div>
+          <div class="flywheel-node reveal">
+            <div class="flywheel-node-num">Step 06</div>
+            <div class="flywheel-node-title">Global Market Leadership</div>
+          </div>
+          <div class="flywheel-node reveal">
+            <div class="flywheel-node-num">Step 05</div>
+            <div class="flywheel-node-title">Brand Reputation &amp; Value</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- BIODEGRADABLE PACKAGING, BACKED BY SPECIFICS (HIDDEN) -->
+  <!--
+  <section class="section-pad bg-sand" style="display: none !important;">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="section-title single-line-title">Biodegradable Packaging, Backed by Specifics</h2>
+        <p class="section-desc">At CELVION, credibility comes from empirical specificity. We replace vague slogans with
+          precise, verifiable material science metrics and circular end-of-life pathways.</p>
+      </div>
+
+      <div class="grid-3 stagger">
+        <div class="impact-card reveal">
+          <div class="impact-header">
+            <div class="impact-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.4 19 2c1 2 2 4.18 2 8 0 5.5-4.7 10-10 10Z" />
+                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+              </svg>
+            </div>
+            <h3>100% Upcycled Agricultural Fibre</h3>
+          </div>
+          <p>Derived entirely from renewable sugarcane bagasse and rapidly renewable agricultural stalk residues,
+            diverting agricultural waste from open-air burning.</p>
+        </div>
+
+        <div class="impact-card reveal">
+          <div class="impact-header">
+            <div class="impact-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <line x1="12" y1="8" x2="12" y2="12" />
+                <line x1="12" y1="16" x2="12.01" y2="16" />
+              </svg>
+            </div>
+            <h3>Zero Microplastic Contamination</h3>
+          </div>
+          <p>Formulated without synthetic PE or PLA laminations. Naturally breaks down in commercial compost facilities
+            into organic nutrient soil within 90 days.</p>
+        </div>
+
+        <div class="impact-card reveal">
+          <div class="impact-header">
+            <div class="impact-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+              </svg>
+            </div>
+            <h3>Closed-Loop Water &amp; Zero Discharge</h3>
+          </div>
+          <p>Our manufacturing facilities feature 100% recycled process water circuits, minimizing freshwater
+            consumption and ensuring zero toxic liquid discharge.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- SECTION 5: CIRCULAR LIFECYCLE (LCA) -->
+  <section class="section-pad" style="background-color: #fff9f3;">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="section-title">Sustainable Bagasse Packaging: From Farm to Compost</h2>
+        <p class="section-desc">From farm field waste recovery to soil regeneration, our circular material lifecycle
+          ensures every product returns safely to nature.</p>
+      </div>
+
+      <div class="lca-grid stagger">
+        <div class="lca-card reveal">
+          <div class="lca-step-badge">Stage 01</div>
+          <h3>Agricultural Recovery</h3>
+          <p>Collecting renewable sugarcane bagasse and plant crop residues directly after agricultural harvest.</p>
+        </div>
+
+        <div class="lca-card reveal">
+          <div class="lca-step-badge">Stage 02</div>
+          <h3>Zero-Discharge Production</h3>
+          <p>Energy-efficient thermoforming using 100% recycled closed-loop process water circuits.</p>
+        </div>
+
+        <div class="lca-card reveal">
+          <div class="lca-step-badge">Stage 03</div>
+          <h3>Enterprise Product Utility</h3>
+          <p>High-strength, leak-proof, food-grade packaging engineered for global commercial supply chains.</p>
+        </div>
+
+        <div class="lca-card reveal">
+          <div class="lca-step-badge">Stage 04</div>
+          <h3>Soil Regeneration</h3>
+          <p>100% organic biodegradation in commercial compost within 90 days, returning nutrients to nature.</p>
+        </div>
+      </div>
+
+      <!-- THE CELVION MANIFESTO -->
+      <div class="manifesto-box reveal">
+        <div class="manifesto-split-layout">
+          <!-- Left Column: Primary Quote Statement -->
+          <div class="manifesto-left">
+            <h3 class="manifesto-lead-title">
+              &ldquo;Progress should <em>never</em> come at the expense of the planet.&rdquo;
+            </h3>
+            <p class="manifesto-lead-sub">
+              We believe engineering can transform natural raw materials into dependable, high-performance solutions
+              engineered with purpose.
+            </p>
+          </div>
+
+          <!-- Right Column: 3 Environment-Focused Visual Pillars -->
+          <div class="manifesto-right-pillars">
+
+            <div class="manifesto-pillar-card">
+              <div class="manifesto-pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 20h10" />
+                  <path d="M12 20v-8" />
+                  <path d="M12 12c-3.5 0-6-2.5-6-6 3.5 0 6 2.5 6 6z" />
+                  <path d="M12 12c3.5 0 6-2.5 6-6-3.5 0-6 2.5-6 6z" />
+                </svg>
+              </div>
+              <div>
+                <h4>Reducing Agricultural Waste</h4>
+                <p>Sugarcane bagasse is often burned in the field, adding to air pollution. We give it a second life instead &mdash; turning waste into everyday products.</p>
+              </div>
+            </div>
+
+            <div class="manifesto-pillar-card">
+              <div class="manifesto-pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <path d="M9 12l2 2 4-4" />
+                </svg>
+              </div>
+              <div>
+                <h4>Cutting Plastic Dependency</h4>
+                <p>Every bagasse product we manufacture is one less piece of single-use plastic entering landfills, rivers, and oceans.</p>
+              </div>
+            </div>
+
+            <div class="manifesto-pillar-card">
+              <div class="manifesto-pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                  <path d="M21 3v5h-5" />
+                  <path d="M21 12a9 9 0 0 1-15 6.7L3 16" />
+                  <path d="M3 21v-5h5" />
+                </svg>
+              </div>
+              <div>
+                <h4>Returning to the Earth, Safely</h4>
+                <p>Our products are designed to compost naturally &mdash; completing the cycle instead of outliving it.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ SECTION ============ -->
+  <section class="section-pad" id="faq" style="background:#e4eeec; padding: 50px 0;">
+    <div class="wrap">
+      <div class="section-head reveal" style="max-width:none; margin-bottom: 28px;">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-list reveal">
+
+        <details class="faq-item" open>
+          <summary>What is bagasse, and how is it used in CELVION products?</summary>
+          <p>Bagasse is the fibrous residue left after sugarcane juice is extracted. CELVION uses this renewable fiber to develop molded tableware and packaging products, providing practical alternatives to conventional plastic and other less sustainable materials where suitable.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Are CELVION bagasse products compostable?</summary>
+          <p>Bagasse products are designed to be compostable under appropriate conditions because they are made primarily from natural plant fiber. The actual compostability claim and timeframe depend on the product, applicable certification and composting conditions.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Why choose bagasse tableware instead of conventional disposable tableware?</summary>
+          <p>Bagasse tableware is made from renewable sugarcane fiber and offers a practical alternative to many conventional disposable plastic and foam products. It is suitable for a wide range of food-service applications while supporting businesses looking to reduce their reliance on conventional single-use materials.</p>
+        </details>
+
+      </div>
+
+      <div style="margin-top: 32px;">
+        <a href="faq.html" class="nav-cta nav-cta-primary"
+          style="display: inline-flex; text-decoration: none; padding: 11px 26px; font-size: 12.5px;">View All FAQs
+          &rarr;</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION SECTION (HIDDEN) -->
+  <!--
+  <section class="bg-sand" style="padding: 48px 0; display: none !important;">
+    <div class="wrap">
+      <div class="cta-banner reveal">
+        <h2>Ready to Co-Engineer Sustainable Packaging?</h2>
+        <p>Partner with CELVION Lab and our engineering teams to develop custom molded fibre packaging solutions
+          tailored to your enterprise requirements.</p>
+        <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap; position:relative; z-index:1;">
+          <a href="contact.html" class="btn btn-solid" style="padding:12px 26px; font-size:12px;">Get a Quote</a>
+          <a href="products.html" class="btn btn-outline" style="padding:12px 26px; font-size:12px;">Explore
+            Products</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- SITE FOOTER -->
+  <footer id="contact" class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo"
+            style="text-decoration:none; display:inline-block; font-family: Arial, sans-serif; font-size:24px; font-weight:800; color:#ffffff; margin-bottom:14px; letter-spacing:-0.02em;">CELVION<span
+              style="color:var(--gold); font-size:0.6em; vertical-align:super; margin-left:2px;">&reg;</span></a>
+          <p class="footer-tagline">Inspired by Nature. Defined by Innovation. A premium global sustainable materials
+            company engineering renewable alternatives to conventional packaging.</p>
+          <div class="footer-socials">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"
+              class="footer-social-link">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+              </svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"
+              class="footer-social-link">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"
+              class="footer-social-link">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="X (Twitter)"
+              class="footer-social-link">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"
+              class="footer-social-link">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="manufacturing.html">Manufacturing</a></li>
+            <li><a href="industries-careers.html">Industries We Serve</a></li>
+            <!-- <li><a href="quality-resources.html">Quality &amp; Resources</a></li> -->
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="innovation-sustainability.html">Innovation &amp; Sustainability</a></li>
+            <li><a href="export.html">Export</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html#rfq">Request a Quote</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Corporate Office</h4>
+          <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 14px;">
+            <div
+              style="display: flex; align-items: flex-start; gap: 10px; color: rgba(255,255,255,0.75); font-size: 14px; line-height: 1.6;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>1313&ndash;1314, 13th Floor, Fortune Business Hub,<br>Nr. Shell Petrol Pump, Science City Road,<br>Sola,
+                Ahmedabad &ndash; 380060, Gujarat, India</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.75); font-size: 14px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+              <a href="tel:+917990441625" style="color: inherit; text-decoration: none;"
+                onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">+91
+                7990441625</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.75); font-size: 14px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <a href="mailto:sales@sngecoindia.com" style="color: inherit; text-decoration: none;"
+                onmouseover="this.style.color='#ffffff'"
+                onmouseout="this.style.color='rgba(255,255,255,0.75)'">sales@sngecoindia.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 SNG Eco India Pvt Ltd. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/917990441625?text=Hi%2C%20I%27m%20interested%20in%20CELVION%20innovation%20and%20sustainability"
+    class="whatsapp-float" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24">
+      <path
+        d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.764.459 3.487 1.333 5.006l-1.417 5.176 5.297-1.389c1.472.802 3.136 1.224 4.773 1.225h.004c5.505 0 9.988-4.478 9.989-9.985 0-2.668-1.039-5.176-2.927-7.062s-4.4-2.939-7.062-2.939zm5.95 14.156c-.25.707-1.464 1.348-2.023 1.428-.521.074-1.2.109-1.936-.127-.446-.143-1.018-.328-1.766-.653-3.14-1.365-5.184-4.551-5.342-4.761-.157-.21-1.282-1.706-1.282-3.254 0-1.547.812-2.308 1.101-2.617.289-.309.631-.387.842-.387.21 0 .421.002.605.011.196.009.46-.074.721.552.263.626.894 2.181.972 2.339.079.158.131.342.026.552-.105.21-.157.342-.315.526-.158.184-.332.411-.473.552-.158.158-.323.328-.139.643.184.315.818 1.35 1.758 2.186 1.208 1.076 2.226 1.41 2.541 1.567.315.158.5.131.684-.079.184-.21.788-.919.998-1.234.21-.315.42-.263.709-.158.289.105 1.838.867 2.153 1.024.315.158.526.236.605.368.079.131.079.761-.171 1.468z" />
+    </svg>
+    <span>Chat with us</span>
+  </a>
+
+  <!-- ============ FLOATING CATALOGUE ============ -->
+  <a href="mailto:sales@sngecoindia.com?subject=Request%20Catalogue" class="catalogue-float">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+      <polyline points="14 2 14 8 20 8"></polyline>
+      <line x1="16" y1="13" x2="8" y2="13"></line>
+      <line x1="16" y1="17" x2="8" y2="17"></line>
+    </svg>
+    <span>Request Catalogue</span>
+  </a>
+
+  <script>
+    // Nav shrink on scroll
+    const nav = document.getElementById('siteNav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) nav.classList.add('is-scrolled');
+      else nav.classList.remove('is-scrolled');
+    }, { passive: true });
+
+    // Reveal-on-scroll
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach((el) => io.observe(el));
+
+    // Mobile Sidebar Drawer Handlers
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileSidebar = document.getElementById('mobileSidebar');
+    const mobileSidebarOverlay = document.getElementById('mobileSidebarOverlay');
+    const mobileSidebarClose = document.getElementById('mobileSidebarClose');
+
+    function openMobileSidebar() {
+      if (mobileSidebar && mobileSidebarOverlay) {
+        mobileSidebar.classList.add('is-active');
+        mobileSidebarOverlay.classList.add('is-active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeMobileSidebar() {
+      if (mobileSidebar && mobileSidebarOverlay) {
+        mobileSidebar.classList.remove('is-active');
+        mobileSidebarOverlay.classList.remove('is-active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMobileSidebar);
+    if (mobileSidebarClose) mobileSidebarClose.addEventListener('click', closeMobileSidebar);
+    if (mobileSidebarOverlay) mobileSidebarOverlay.addEventListener('click', closeMobileSidebar);
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        closeMobileSidebar();
+      }
+    });
+
+    // Only one FAQ item open at a time (Home Page Accordion Logic)
+    document.querySelectorAll('.faq-list').forEach((group) => {
+      const items = group.querySelectorAll('details.faq-item');
+      items.forEach((item) => {
+        item.addEventListener('toggle', () => {
+          if (item.open) {
+            items.forEach((other) => { if (other !== item) other.open = false; });
+          }
+        });
+      });
+    });
+
+    // Language Selector Script
+    const langBtn = document.getElementById('langSelectorBtn');
+    const langWrapper = document.getElementById('langSelector');
+    if (langBtn && langWrapper) {
+      langBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        langWrapper.classList.toggle('active');
+      });
+      document.addEventListener('click', function () {
+        langWrapper.classList.remove('active');
+      });
+    }
+
+    function setLanguage(langCode, langName) {
+      document.querySelectorAll('.current-lang-text').forEach(function (el) {
+        el.textContent = langCode.toUpperCase();
+      });
+      document.querySelectorAll('.lang-option').forEach(function (opt) {
+        opt.classList.toggle('active', opt.getAttribute('data-lang') === langCode);
+      });
+      document.querySelectorAll('.mobile-lang-select').forEach(function (sel) {
+        sel.value = langCode;
+      });
+      if (langWrapper) langWrapper.classList.remove('active');
+    }
+  </script>
+
+</body>
+
+</html>
